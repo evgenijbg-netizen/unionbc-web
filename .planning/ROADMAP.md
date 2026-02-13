@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation & Design System** - Bilingual architecture, responsive layout, industrial design system, hosting
 - [x] **Phase 2: Content & Conversion** - All product pages, resources, FAQ, contact, CTAs with from-scratch bilingual content
 - [x] **Phase 02.1: Visual Refresh & Content Accuracy (INSERTED)** - Light palette, real images, factual claims audit
-- [ ] **Phase 02.2: Content Restructuring & Product Image (INSERTED)** - Dedicated applications page, TC101 bucket image
+- [x] **Phase 02.2: Content Restructuring & Product Image (INSERTED)** - Dedicated applications page, TC101 bucket image
 - [ ] **Phase 3: Interactive Calculator** - Energy savings calculator as isolated Preact island with validated formulas
 - [ ] **Phase 4: Launch & SEO Migration** - Structured data, SEO audit, 301 redirects, go-live
 
@@ -87,7 +87,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 02.2-01-PLAN.md -- Move application sections to dedicated page, add TC101 bucket image, update nav
+- [x] 02.2-01-PLAN.md -- Move application sections to dedicated page, add TC101 bucket image, update nav
 
 ### Phase 3: Interactive Calculator
 **Goal**: Visitors can estimate their energy savings and payback period using an interactive calculator, turning the site from a brochure into a sales tool
@@ -120,13 +120,13 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 --> 2 --> 02.1 --> 3 --> 4
+Phases execute in numeric order: 1 --> 2 --> 02.1 --> 02.2 --> 3 --> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 3/3 | Complete | 2026-02-13 |
 | 2. Content & Conversion | 3/3 | Complete | 2026-02-13 |
 | 02.1. Visual Refresh & Content Accuracy | 5/5 | Complete | 2026-02-13 |
-| 02.2. Content Restructuring & Product Image | 0/1 | Not started | - |
+| 02.2. Content Restructuring & Product Image | 1/1 | Complete | 2026-02-13 |
 | 3. Interactive Calculator | 0/1 | Not started | - |
 | 4. Launch & SEO Migration | 0/1 | Not started | - |
