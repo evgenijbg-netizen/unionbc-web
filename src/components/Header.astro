@@ -21,12 +21,18 @@ const navItems = [
 
 <header class="bg-surface-800 border-b border-surface-700 sticky top-0 z-50">
 	<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-		<!-- Logo -->
+		<!-- Logo: Union B+C Variant D (dark background) -->
 		<a
 			href={getLocalizedPath("home", locale)}
-			class="font-heading font-bold text-xl text-text-light tracking-tight hover:text-accent-400 transition-colors"
+			class="inline-flex items-center hover:opacity-80 transition-opacity"
+			aria-label="UNION B+C s.r.o."
 		>
-			TEMP-COAT
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 50" class="h-8 w-auto" aria-hidden="true">
+				<text y="36" font-family="'Outfit Variable', sans-serif" font-size="32" font-weight="700" letter-spacing="0.12em" fill="#FFFFFF">
+					<tspan x="0">UNION B</tspan><tspan fill="#00B8A9" font-weight="400">+</tspan><tspan fill="#FFFFFF">C</tspan>
+				</text>
+				<text x="330" y="36" font-family="'Outfit Variable', sans-serif" font-size="13" font-weight="300" letter-spacing="0.08em" fill="rgba(255,255,255,0.3)">s.r.o.</text>
+			</svg>
 		</a>
 
 		<!-- Desktop navigation -->
