@@ -1,0 +1,45 @@
+---
+import { type Locale, t } from "../../i18n/utils";
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const steps = [
+	{ id: "prep", number: 1 },
+	{ id: "mixing", number: 2 },
+	{ id: "application", number: 3 },
+	{ id: "thickness", number: 4 },
+	{ id: "drying", number: 5 },
+	{ id: "cleanup", number: 6 },
+];
+---
+
+<div class="bg-surface-800 border border-surface-700 rounded-lg p-8">
+	<h3 class="text-2xl font-heading font-bold mb-4">{t(locale, "guide.title")}</h3>
+	<p class="text-text-secondary mb-8">{t(locale, "guide.intro")}</p>
+
+	<div class="space-y-6">
+		{
+			steps.map((step) => (
+				<div class="flex gap-4">
+					<div class="flex-shrink-0">
+						<div class="w-10 h-10 rounded-full bg-accent-500 text-surface-900 font-heading font-bold flex items-center justify-center">
+							{step.number}
+						</div>
+					</div>
+					<div class="flex-1">
+						<h4 class="font-heading font-semibold text-lg mb-2">
+							{t(locale, `guide.step${step.number}.title`)}
+						</h4>
+						<p class="text-text-secondary leading-relaxed">
+							{t(locale, `guide.step${step.number}.description`)}
+						</p>
+					</div>
+				</div>
+			))
+		}
+	</div>
+</div>
