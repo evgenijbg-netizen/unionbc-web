@@ -3,26 +3,26 @@
 @theme {
 	/* Light professional palette -- OKLCH for perceptual uniformity */
 
-	/* Surfaces: 50 = lightest (page bg), 900 = darkest (header/footer) */
-	--color-surface-900: oklch(0.15 0.01 250); /* Darkest -- header, footer */
-	--color-surface-800: oklch(0.22 0.01 250); /* Dark sections, nav */
-	--color-surface-700: oklch(0.3 0.01 250); /* Dark borders, hover */
-	--color-surface-600: oklch(0.4 0.01 250); /* Muted elements */
+	/* Surfaces: 50 = lightest (page bg), 900 = darkest (header/footer) -- brand navy #1B2A4A */
+	--color-surface-900: oklch(0.23 0.06 264); /* Darkest -- footer bg, near #1B2A4A */
+	--color-surface-800: oklch(0.29 0.06 264); /* Dark sections, header -- brand navy */
+	--color-surface-700: oklch(0.36 0.05 264); /* Dark borders, hover */
+	--color-surface-600: oklch(0.44 0.04 264); /* Muted elements */
 	--color-surface-200: oklch(0.9 0.005 250); /* Card backgrounds */
 	--color-surface-100: oklch(0.95 0.005 250); /* Alternate section bg */
 	--color-surface-50: oklch(0.98 0.002 0); /* Primary page background -- near-white, neutral */
 
-	/* Accent: professional blue, increased chroma for visibility on light */
-	--color-accent-600: oklch(0.5 0.18 250); /* Active/pressed state */
-	--color-accent-500: oklch(0.58 0.18 250); /* Primary buttons, links */
-	--color-accent-400: oklch(0.68 0.15 250); /* Hover state, highlights */
+	/* Accent: brand teal #00B8A9 */
+	--color-accent-600: oklch(0.60 0.12 185); /* Active/pressed state -- darker teal */
+	--color-accent-500: oklch(0.70 0.124 185); /* Primary buttons, links -- brand teal */
+	--color-accent-400: oklch(0.78 0.10 185); /* Hover state, highlights -- lighter teal */
 
 	/* Warning/CTA: warm amber, slightly deeper for light bg contrast */
 	--color-warn-500: oklch(0.7 0.18 65);
 
 	/* Text: dark on light -- inverted from current */
 	--color-text-primary: oklch(0.2 0.01 250); /* Main body text -- dark */
-	--color-text-secondary: oklch(0.45 0.01 250); /* Secondary/muted text */
+	--color-text-secondary: oklch(0.615 0.033 263); /* Secondary/muted text -- brand Cool Grey #7A8599 */
 	--color-text-dark: oklch(0.15 0.01 250); /* Headings, emphasis */
 	--color-text-light: oklch(0.95 0.005 250); /* Text on dark backgrounds (header/footer) */
 
