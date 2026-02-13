@@ -1,0 +1,21 @@
+---
+import { getAlternatePath } from "../i18n/routes";
+import { getLocaleFromUrl, type Locale, t } from "../i18n/utils";
+
+interface Props {
+	locale: Locale;
+	pageKey?: string;
+}
+
+const { locale } = Astro.props;
+const alternatePath = getAlternatePath(Astro.url.pathname, locale === "cs" ? "en" : "cs");
+const label = t(locale, "nav.language");
+---
+
+<a
+	href={alternatePath}
+	class="text-text-secondary hover:text-accent-400 transition-colors text-sm font-medium"
+	aria-label={label}
+>
+	{label}
+</a>

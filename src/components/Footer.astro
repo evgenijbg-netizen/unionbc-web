@@ -1,0 +1,85 @@
+---
+import { getLocalizedPath } from "../i18n/routes";
+import { type Locale, t } from "../i18n/utils";
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const navItems = [
+	{ key: "home", label: t(locale, "nav.home") },
+	{ key: "product", label: t(locale, "nav.product") },
+	{ key: "faq", label: t(locale, "nav.faq") },
+	{ key: "certificates", label: t(locale, "nav.certificates") },
+	{ key: "contact", label: t(locale, "nav.contact") },
+];
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-surface-800 border-t border-surface-700 py-12 px-6 text-text-secondary">
+	<div class="max-w-7xl mx-auto">
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+			<!-- Column 1: Company info -->
+			<div>
+				<p class="font-heading font-bold text-text-primary text-lg mb-2">
+					{t(locale, "footer.company")}
+				</p>
+				<p class="text-sm leading-relaxed">
+					{t(locale, "footer.address")}
+				</p>
+			</div>
+
+			<!-- Column 2: Contact -->
+			<div>
+				<p class="font-heading font-bold text-text-primary text-lg mb-2">
+					{t(locale, "nav.contact")}
+				</p>
+				<p class="text-sm mb-1">
+					<a
+						href={`tel:${t(locale, "footer.phone").replace(/\s/g, "")}`}
+						class="hover:text-accent-400 transition-colors"
+					>
+						{t(locale, "footer.phone")}
+					</a>
+				</p>
+				<p class="text-sm">
+					<a
+						href={`mailto:${t(locale, "footer.email")}`}
+						class="hover:text-accent-400 transition-colors"
+					>
+						{t(locale, "footer.email")}
+					</a>
+				</p>
+			</div>
+
+			<!-- Column 3: Quick links -->
+			<div>
+				<p class="font-heading font-bold text-text-primary text-lg mb-2">
+					{t(locale, "nav.home")}
+				</p>
+				<nav aria-label="Footer navigation">
+					<ul class="space-y-1">
+						{navItems.map((item) => (
+							<li>
+								<a
+									href={getLocalizedPath(item.key, locale)}
+									class="text-sm hover:text-accent-400 transition-colors"
+								>
+									{item.label}
+								</a>
+							</li>
+						))}
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Bottom bar: copyright -->
+		<div class="mt-8 pt-8 border-t border-surface-700 text-center text-sm">
+			<p>&copy; {currentYear} {t(locale, "footer.copyright")}</p>
+		</div>
+	</div>
+</footer>

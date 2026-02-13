@@ -1,0 +1,118 @@
+---
+import { getLocalizedPath } from "../i18n/routes";
+import { type Locale, t } from "../i18n/utils";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+
+interface Props {
+	locale: Locale;
+	pageKey?: string;
+}
+
+const { locale, pageKey } = Astro.props;
+
+const navItems = [
+	{ key: "home", label: t(locale, "nav.home") },
+	{ key: "product", label: t(locale, "nav.product") },
+	{ key: "faq", label: t(locale, "nav.faq") },
+	{ key: "certificates", label: t(locale, "nav.certificates") },
+	{ key: "contact", label: t(locale, "nav.contact") },
+];
+---
+
+<header class="bg-surface-800 border-b border-surface-700 sticky top-0 z-50">
+	<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+		<!-- Logo -->
+		<a
+			href={getLocalizedPath("home", locale)}
+			class="font-heading font-bold text-xl text-text-primary tracking-tight hover:text-accent-400 transition-colors"
+		>
+			TEMP-COAT
+		</a>
+
+		<!-- Desktop navigation -->
+		<nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+			{navItems.map((item) => (
+				<a
+					href={getLocalizedPath(item.key, locale)}
+					class:list={[
+						"text-sm font-medium transition-colors",
+						pageKey === item.key
+							? "text-accent-400"
+							: "text-text-secondary hover:text-text-primary",
+					]}
+				>
+					{item.label}
+				</a>
+			))}
+			<LanguageSwitcher locale={locale} pageKey={pageKey} />
+		</nav>
+
+		<!-- Mobile hamburger button -->
+		<button
+			type="button"
+			class="md:hidden text-text-secondary hover:text-text-primary transition-colors"
+			aria-label="Toggle menu"
+			aria-expanded="false"
+			id="mobile-menu-btn"
+		>
+			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M4 6h16M4 12h16M4 18h16"
+					id="hamburger-icon"
+				/>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M6 18L18 6M6 6l12 12"
+					id="close-icon"
+					class="hidden"
+				/>
+			</svg>
+		</button>
+	</div>
+
+	<!-- Mobile navigation -->
+	<nav
+		class="hidden md:hidden border-t border-surface-700 px-6 pb-4"
+		id="mobile-menu"
+		aria-label="Mobile navigation"
+	>
+		{navItems.map((item) => (
+			<a
+				href={getLocalizedPath(item.key, locale)}
+				class:list={[
+					"block py-2 text-sm font-medium transition-colors",
+					pageKey === item.key
+						? "text-accent-400"
+						: "text-text-secondary hover:text-text-primary",
+				]}
+			>
+				{item.label}
+			</a>
+		))}
+		<div class="pt-2 border-t border-surface-700 mt-2">
+			<LanguageSwitcher locale={locale} pageKey={pageKey} />
+		</div>
+	</nav>
+</header>
+
+<script>
+	const btn = document.getElementById("mobile-menu-btn");
+	const menu = document.getElementById("mobile-menu");
+	const hamburgerIcon = document.getElementById("hamburger-icon");
+	const closeIcon = document.getElementById("close-icon");
+
+	if (btn && menu && hamburgerIcon && closeIcon) {
+		btn.addEventListener("click", () => {
+			const isOpen = !menu.classList.contains("hidden");
+			menu.classList.toggle("hidden");
+			hamburgerIcon.classList.toggle("hidden");
+			closeIcon.classList.toggle("hidden");
+			btn.setAttribute("aria-expanded", String(!isOpen));
+		});
+	}
+</script>

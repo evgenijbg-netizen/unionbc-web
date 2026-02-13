@@ -1,0 +1,56 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { getAlternatePath } from "../i18n/routes";
+import { getLocaleFromUrl, type Locale, locales, t } from "../i18n/utils";
+import "../styles/global.css";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/space-grotesk";
+
+interface Props {
+	title: string;
+	description: string;
+	pageKey?: string;
+}
+
+const { title, description, pageKey } = Astro.props;
+const locale = getLocaleFromUrl(Astro.url) as Locale;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!doctype html>
+<html lang={locale}>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<link rel="canonical" href={canonicalUrl} />
+
+	{/* hreflang tags for all locales */}
+	{locales.map((loc) => {
+		const altPath = loc === locale
+			? Astro.url.pathname
+			: getAlternatePath(Astro.url.pathname, loc);
+		const altUrl = new URL(altPath, Astro.site).href;
+		return <link rel="alternate" hreflang={loc} href={altUrl} />;
+	})}
+	<link
+		rel="alternate"
+		hreflang="x-default"
+		href={new URL(
+			locale === "cs" ? Astro.url.pathname : getAlternatePath(Astro.url.pathname, "cs"),
+			Astro.site,
+		).href}
+	/>
+
+	<slot name="head" />
+</head>
+<body class="bg-surface-900 text-text-primary font-body min-h-screen flex flex-col">
+	<Header locale={locale} pageKey={pageKey} />
+	<main class="flex-1">
+		<slot />
+	</main>
+	<Footer locale={locale} />
+</body>
+</html>
