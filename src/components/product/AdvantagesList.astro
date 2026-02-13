@@ -8,24 +8,15 @@ interface Props {
 
 const { locale } = Astro.props;
 
-const advantages = [
-	"timeSaving",
-	"noScaffolding",
-	"fireResistant",
-	"lightweight",
-	"antiCorrosion",
-	"vaporPermeable",
-	"flexible",
-	"wideTemp",
-];
+const benefits = ["safety", "noDowntime", "corrosion", "versatility", "savings"];
 ---
 
 <section class="py-16 px-6">
 	<div class="max-w-6xl mx-auto">
-		<SectionHeading title={t(locale, "product.advantages.title")} />
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+		<SectionHeading title={t(locale, "product.benefits.title")} />
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
 			{
-				advantages.map((adv) => (
+				benefits.map((benefit) => (
 					<div class="bg-surface-200 border border-surface-200 rounded-lg p-6">
 						<div class="flex items-start gap-4">
 							<div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-500/20 flex items-center justify-center">
@@ -45,10 +36,10 @@ const advantages = [
 							</div>
 							<div class="flex-1">
 								<h3 class="text-lg font-heading font-semibold mb-2">
-									{t(locale, `product.advantages.${adv}.title`)}
+									{t(locale, `product.benefits.${benefit}.title`)}
 								</h3>
 								<p class="text-text-secondary">
-									{t(locale, `product.advantages.${adv}.description`)}
+									{t(locale, `product.benefits.${benefit}.description`)}
 								</p>
 							</div>
 						</div>

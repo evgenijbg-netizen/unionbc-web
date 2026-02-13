@@ -1,9 +1,11 @@
 ---
 import AdvantagesList from "../../components/product/AdvantagesList.astro";
 import ComparisonTable from "../../components/product/ComparisonTable.astro";
+import CooperationWorkflow from "../../components/product/CooperationWorkflow.astro";
 import HeroSection from "../../components/product/HeroSection.astro";
 import HowItWorks from "../../components/product/HowItWorks.astro";
 import SpecsTable from "../../components/product/SpecsTable.astro";
+import { getLocalizedPath } from "../../i18n/routes";
 import { getLocaleFromUrl, t } from "../../i18n/utils";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
@@ -19,5 +21,24 @@ const locale = getLocaleFromUrl(Astro.url);
 	<SpecsTable locale={locale} />
 	<HowItWorks locale={locale} />
 	<AdvantagesList locale={locale} />
+	<CooperationWorkflow locale={locale} />
 	<ComparisonTable locale={locale} />
+
+	<!-- Product CTA section -->
+	<section class="bg-surface-100 py-16 px-6">
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="text-3xl font-heading font-bold mb-6">
+				{t(locale, "product.cta.title")}
+			</h2>
+			<p class="text-lg text-text-secondary mb-8">
+				{t(locale, "product.cta.description")}
+			</p>
+			<a
+				href={getLocalizedPath("contact", locale)}
+				class="inline-block bg-accent-500 hover:bg-accent-400 text-white font-heading font-semibold px-8 py-3 rounded-sm transition"
+			>
+				{t(locale, "product.cta.button")}
+			</a>
+		</div>
+	</section>
 </BaseLayout>
