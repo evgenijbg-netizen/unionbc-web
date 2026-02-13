@@ -91,12 +91,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONV-01 | Phase 2: Content & Conversion | Pending |
 | CONV-02 | Phase 3: Interactive Calculator | Pending |
 | CONV-03 | Phase 2: Content & Conversion | Pending |
-| TECH-01 | Phase 1: Foundation & Design System | Pending |
-| TECH-02 | Phase 1: Foundation & Design System | Pending |
+| TECH-01 | Phase 1: Foundation & Design System | Complete |
+| TECH-02 | Phase 1: Foundation & Design System | Complete |
 | TECH-03 | Phase 4: Launch & SEO Migration | Pending |
-| TECH-04 | Phase 1: Foundation & Design System | Pending |
-| TECH-05 | Phase 1: Foundation & Design System | Pending |
-| TECH-06 | Phase 1: Foundation & Design System | Pending |
+| TECH-04 | Phase 1: Foundation & Design System | Complete |
+| TECH-05 | Phase 1: Foundation & Design System | Deferred (deploy pending) |
+| TECH-06 | Phase 1: Foundation & Design System | Complete |
 | TECH-07 | Phase 4: Launch & SEO Migration | Pending |
 | QUAL-01 | Phase 2: Content & Conversion | Pending |
 | QUAL-02 | Phase 2: Content & Conversion | Pending |

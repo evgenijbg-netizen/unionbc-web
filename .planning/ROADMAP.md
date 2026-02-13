@@ -12,7 +12,7 @@ This roadmap delivers a modern bilingual (CZ/EN) product website for TEMP-COAT T
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation & Design System** - Bilingual architecture, responsive layout, industrial design system, hosting
+- [x] **Phase 1: Foundation & Design System** - Bilingual architecture, responsive layout, industrial design system, hosting
 - [ ] **Phase 2: Content & Conversion** - All product pages, resources, FAQ, contact, CTAs with from-scratch bilingual content
 - [ ] **Phase 3: Interactive Calculator** - Energy savings calculator as isolated Preact island with validated formulas
 - [ ] **Phase 4: Launch & SEO Migration** - Structured data, SEO audit, 301 redirects, go-live
@@ -32,9 +32,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- Project scaffolding (Astro 5 + TypeScript + Tailwind CSS 4 + Biome 2), design system tokens, old-site redirects
-- [ ] 01-02-PLAN.md -- i18n translation system, shared layout shell (header, footer, language switcher), bilingual homepage placeholders
-- [ ] 01-03-PLAN.md -- Homepage polish, build verification, Cloudflare Pages deployment, human visual sign-off
+- [x] 01-01-PLAN.md -- Project scaffolding (Astro 5 + TypeScript + Tailwind CSS 4 + Biome 2), design system tokens, old-site redirects
+- [x] 01-02-PLAN.md -- i18n translation system, shared layout shell (header, footer, language switcher), bilingual homepage placeholders
+- [x] 01-03-PLAN.md -- Homepage polish, build verification, Cloudflare Pages deployment, human visual sign-off
 
 ### Phase 2: Content & Conversion
 **Goal**: Visitors can understand what TC101 is, why it works, see evidence, download documents, and know who to contact -- in both Czech and English
@@ -88,7 +88,7 @@ Phases execute in numeric order: 1 --> 2 --> 3 --> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Design System | 0/3 | Planned | - |
+| 1. Foundation & Design System | 3/3 | ✓ Complete | 2026-02-13 |
 | 2. Content & Conversion | 0/3 | Not started | - |
 | 3. Interactive Calculator | 0/1 | Not started | - |
 | 4. Launch & SEO Migration | 0/1 | Not started | - |
