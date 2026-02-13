@@ -17,5 +17,11 @@
 	"home.hero.title": "TEMP-COAT TC101",
 	"home.hero.subtitle": "Tekut\u00e1 keramick\u00e1 tepeln\u00e1 izolace",
 	"home.hero.description": "Pr\u016fmyslov\u00e1 tepeln\u00e1 izolace nov\u00e9 generace. Nan\u00e1\u0161\u00ed se jako n\u00e1t\u011br, izoluje jako centimetry klasick\u00e9 izolace.",
-	"home.coming_soon": "Obsah p\u0159ipravujeme"
+	"home.coming_soon": "Obsah p\u0159ipravujeme",
+	"home.stats.temp_range": "-60 \u00b0C a\u017e +260 \u00b0C",
+	"home.stats.temp_range_label": "Teplotn\u00ed rozsah",
+	"home.stats.conductivity": "0.001 W/m\u00b7\u00b0C",
+	"home.stats.conductivity_label": "Tepeln\u00e1 vodivost",
+	"home.stats.application": "Nan\u00e1\u0161\u00ed se jako n\u00e1t\u011br",
+	"home.stats.application_label": "Aplikace"
 }

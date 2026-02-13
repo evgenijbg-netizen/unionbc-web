@@ -17,5 +17,11 @@
 	"home.hero.title": "TEMP-COAT TC101",
 	"home.hero.subtitle": "Liquid ceramic thermal insulation",
 	"home.hero.description": "Next-generation industrial thermal insulation. Applied like paint, insulates like inches of conventional material.",
-	"home.coming_soon": "Content coming soon"
+	"home.coming_soon": "Content coming soon",
+	"home.stats.temp_range": "-60 \u00b0C to +260 \u00b0C",
+	"home.stats.temp_range_label": "Temperature range",
+	"home.stats.conductivity": "0.001 W/m\u00b7\u00b0C",
+	"home.stats.conductivity_label": "Thermal conductivity",
+	"home.stats.application": "Applied like paint",
+	"home.stats.application_label": "Application"
 }

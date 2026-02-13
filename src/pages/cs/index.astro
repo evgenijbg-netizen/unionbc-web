@@ -1,4 +1,5 @@
 ---
+import { getLocalizedPath } from "../../i18n/routes";
 import { getLocaleFromUrl, t } from "../../i18n/utils";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
@@ -17,14 +18,43 @@ const locale = getLocaleFromUrl(Astro.url);
 		<p class="text-xl md:text-2xl text-accent-400 mb-6">
 			{t(locale, "home.hero.subtitle")}
 		</p>
-		<p class="text-lg text-text-secondary max-w-2xl mx-auto">
+		<p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
 			{t(locale, "home.hero.description")}
 		</p>
+		<a
+			href={getLocalizedPath("contact", locale)}
+			class="inline-block bg-accent-500 hover:bg-accent-400 text-surface-900 font-heading font-semibold px-8 py-3 rounded-sm transition"
+		>
+			{t(locale, "cta.consultation")}
+		</a>
 	</section>
 
-	<section class="py-12 px-6 text-center">
-		<p class="text-text-secondary text-sm italic">
-			{t(locale, "home.coming_soon")}
-		</p>
+	<section class="py-16 px-6">
+		<div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+			<div class="bg-surface-800 border border-surface-700 rounded p-6 text-center">
+				<p class="text-2xl font-heading text-accent-400 mb-2">
+					{t(locale, "home.stats.temp_range")}
+				</p>
+				<p class="text-sm text-text-secondary">
+					{t(locale, "home.stats.temp_range_label")}
+				</p>
+			</div>
+			<div class="bg-surface-800 border border-surface-700 rounded p-6 text-center">
+				<p class="text-2xl font-heading text-accent-400 mb-2">
+					{t(locale, "home.stats.conductivity")}
+				</p>
+				<p class="text-sm text-text-secondary">
+					{t(locale, "home.stats.conductivity_label")}
+				</p>
+			</div>
+			<div class="bg-surface-800 border border-surface-700 rounded p-6 text-center">
+				<p class="text-2xl font-heading text-accent-400 mb-2">
+					{t(locale, "home.stats.application")}
+				</p>
+				<p class="text-sm text-text-secondary">
+					{t(locale, "home.stats.application_label")}
+				</p>
+			</div>
+		</div>
 	</section>
 </BaseLayout>
