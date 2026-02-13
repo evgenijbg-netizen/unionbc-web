@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-12)
 
 ## Current Position
 
-Phase: 2 of 4 (Content Conversion) -- PHASE COMPLETE
-Plan: 3 of 3 in current phase -- COMPLETE
-Status: Contact page, sticky CTA, i18n parity verified, Phase 2 content approved
-Last activity: 2026-02-13 -- Completed 02-03-PLAN.md (3 tasks, 7 files, 5 min)
+Phase: 02.1 of 4 (Visual Refresh & Content Accuracy) -- IN PROGRESS
+Plan: 2 of 3 in current phase
+Status: Technical claims audited, fire classification corrected, measurement qualifiers added
+Last activity: 2026-02-13 -- Completed 02.1-02-PLAN.md (2 tasks, 2 files, 2 min)
 
-Progress: [██████░░░░] 50%
+Progress: [██████░░░░] 58%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 6.5 min
-- Total execution time: 0.67 hours
+- Total plans completed: 7
+- Average duration: 5.6 min
+- Total execution time: 0.73 hours
 
 **By Phase:**
 
@@ -29,10 +29,11 @@ Progress: [██████░░░░] 50%
 |-------|-------|-------|----------|
 | 01-foundation-design-system | 3/3 | 15 min | 5 min |
 | 02-content-conversion | 3/3 | 22 min | 7.3 min |
+| 02.1-visual-refresh-content-accuracy | 2/3 | 4 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-03 (4 min), 02-01 (8 min), 02-02 (9 min), 02-03 (5 min)
-- Trend: Content plans averaging 7.3 min, foundation averaged 5 min
+- Last 5 plans: 02-01 (8 min), 02-02 (9 min), 02-03 (5 min), 02.1-02 (2 min)
+- Trend: Phase 02.1 averaging 2 min (focused content fixes)
 
 *Updated after each plan completion*
 
@@ -67,6 +68,12 @@ Recent decisions affecting current work:
 - [Phase 02-03]: Main element padding (pb-16) prevents sticky CTA from overlapping content on mobile
 - [Phase 02-03]: Human checkpoint validates all Phase 2 content quality before Phase 3 begins
 - [Phase 02-03]: Full i18n parity verified - 271 keys in both cs.json and en.json with zero mismatches
+- [Phase 02.1-02]: Fire classification changed from 'non-combustible' to accurate 'Class E per EN 13501-1' language
+- [Phase 02.1-02]: Thermal conductivity and temperature range claims qualified with manufacturer attribution and continuous vs peak distinction
+
+### Roadmap Evolution
+
+- Phase 02.1 inserted after Phase 2: Visual Refresh & Content Accuracy (URGENT) -- light color palette, images from old site + stock, factual claims audit
 
 ### Pending Todos
 
@@ -81,5 +88,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-13
-Stopped at: Completed 02-03-PLAN.md (Contact page, sticky CTA, Phase 2 complete)
-Resume file: .planning/phases/02-content-conversion/02-03-SUMMARY.md
+Stopped at: Completed 02.1-02-PLAN.md (Technical claims accuracy audit)
+Resume file: .planning/phases/02.1-visual-refresh-content-accuracy/02.1-02-SUMMARY.md
