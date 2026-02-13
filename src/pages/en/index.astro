@@ -4,6 +4,9 @@ import { getLocaleFromUrl, t } from "../../i18n/utils";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const locale = getLocaleFromUrl(Astro.url);
+
+const whyFeatures = ["time", "money", "proven"];
+const industries = ["cement", "refinery", "food", "brewery", "paper", "construction", "marine"];
 ---
 
 <BaseLayout
@@ -11,26 +14,41 @@ const locale = getLocaleFromUrl(Astro.url);
 	description={t(locale, "site.description")}
 	pageKey="home"
 >
+	<!-- Hero Section (Enhanced) -->
 	<section class="py-24 px-6 text-center">
-		<h1 class="text-5xl md:text-7xl font-heading font-bold text-text-primary mb-4">
-			{t(locale, "home.hero.title")}
-		</h1>
-		<p class="text-xl md:text-2xl text-accent-400 mb-6">
-			{t(locale, "home.hero.subtitle")}
-		</p>
-		<p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
-			{t(locale, "home.hero.description")}
-		</p>
-		<a
-			href={getLocalizedPath("contact", locale)}
-			class="inline-block bg-accent-500 hover:bg-accent-400 text-surface-900 font-heading font-semibold px-8 py-3 rounded-sm transition"
-		>
-			{t(locale, "cta.consultation")}
-		</a>
+		<div class="max-w-4xl mx-auto">
+			<h1 class="text-5xl md:text-7xl font-heading font-bold text-text-primary mb-4">
+				{t(locale, "home.hero.title")}
+			</h1>
+			<p class="text-xl md:text-2xl text-accent-400 mb-6">
+				{t(locale, "home.hero.subtitle")}
+			</p>
+			<p class="text-lg text-text-secondary mb-4">
+				{t(locale, "home.hero.description")}
+			</p>
+			<p class="text-2xl font-heading font-bold text-accent-400 mb-8">
+				{t(locale, "home.hero.valueProp")}
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+				<a
+					href={getLocalizedPath("contact", locale)}
+					class="inline-block bg-accent-500 hover:bg-accent-400 text-surface-900 font-heading font-semibold px-8 py-3 rounded-sm transition"
+				>
+					{t(locale, "cta.consultation")}
+				</a>
+				<a
+					href={getLocalizedPath("product", locale)}
+					class="inline-block border border-accent-500 text-accent-400 hover:bg-accent-500/10 font-heading font-semibold px-8 py-3 rounded-sm transition"
+				>
+					{t(locale, "home.hero.learnMore")}
+				</a>
+			</div>
+		</div>
 	</section>
 
+	<!-- Key Stats Section (Enhanced to 4 cards) -->
 	<section class="py-16 px-6">
-		<div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+		<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 			<div class="bg-surface-800 border border-surface-700 rounded p-6 text-center">
 				<p class="text-2xl font-heading text-accent-400 mb-2">
 					{t(locale, "home.stats.temp_range")}
@@ -55,6 +73,89 @@ const locale = getLocaleFromUrl(Astro.url);
 					{t(locale, "home.stats.application_label")}
 				</p>
 			</div>
+			<div class="bg-surface-800 border border-surface-700 rounded p-6 text-center">
+				<p class="text-2xl font-heading text-accent-400 mb-2">
+					{t(locale, "home.stats.certified")}
+				</p>
+				<p class="text-sm text-text-secondary">
+					{t(locale, "home.stats.certified_label")}
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why TC101 Section -->
+	<section class="py-16 px-6 bg-surface-800">
+		<div class="max-w-6xl mx-auto">
+			<h2 class="text-3xl md:text-4xl font-heading font-bold text-text-primary text-center mb-12">
+				{t(locale, "home.why.title")}
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				{
+					whyFeatures.map((feature) => (
+						<div class="text-center">
+							<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-accent-500/20 flex items-center justify-center">
+								<svg
+									class="w-8 h-8 text-accent-400"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M5 13l4 4L19 7"
+									/>
+								</svg>
+							</div>
+							<h3 class="text-xl font-heading font-semibold text-text-primary mb-3">
+								{t(locale, `home.why.${feature}.title`)}
+							</h3>
+							<p class="text-text-secondary">{t(locale, `home.why.${feature}.description`)}</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<!-- Industries Section -->
+	<section class="py-16 px-6">
+		<div class="max-w-5xl mx-auto text-center">
+			<h2 class="text-3xl md:text-4xl font-heading font-bold text-text-primary mb-4">
+				{t(locale, "home.industries.title")}
+			</h2>
+			<p class="text-lg text-text-secondary mb-8">
+				{t(locale, "home.industries.subtitle")}
+			</p>
+			<div class="flex flex-wrap gap-3 justify-center">
+				{
+					industries.map((industry) => (
+						<span class="bg-surface-800 border border-surface-700 px-4 py-2 rounded-full text-sm text-text-secondary">
+							{t(locale, `home.industries.${industry}`)}
+						</span>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 px-6 bg-surface-800">
+		<div class="max-w-3xl mx-auto text-center">
+			<h2 class="text-3xl md:text-4xl font-heading font-bold text-text-primary mb-4">
+				{t(locale, "home.cta.title")}
+			</h2>
+			<p class="text-lg text-text-secondary mb-8">
+				{t(locale, "home.cta.description")}
+			</p>
+			<a
+				href={getLocalizedPath("contact", locale)}
+				class="inline-block bg-accent-500 hover:bg-accent-400 text-surface-900 font-heading font-semibold px-8 py-3 rounded-sm transition"
+			>
+				{t(locale, "home.cta.button")}
+			</a>
 		</div>
 	</section>
 </BaseLayout>
