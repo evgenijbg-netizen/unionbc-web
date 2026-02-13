@@ -47,7 +47,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 
 	<slot name="head" />
 </head>
-<body class="bg-surface-900 text-text-primary font-body min-h-screen flex flex-col">
+<body class="bg-surface-50 text-text-primary font-body min-h-screen flex flex-col">
 	<Header locale={locale} pageKey={pageKey} />
 	<main class="flex-1 pb-16 md:pb-0">
 		<slot />

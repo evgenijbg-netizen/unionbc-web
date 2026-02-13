@@ -26,7 +26,7 @@ const specs = [
 		<div class="overflow-x-auto">
 			<table class="w-full border-collapse">
 				<thead>
-					<tr class="border-b border-surface-700">
+					<tr class="border-b border-surface-200">
 						<th class="text-left py-3 px-4 text-text-secondary font-heading font-semibold">
 							{t(locale, "product.specs.parameterLabel")}
 						</th>
@@ -38,8 +38,8 @@ const specs = [
 				<tbody>
 					{
 						specs.map((spec) => (
-							<tr class="border-b border-surface-800">
-								<td class="py-4 px-4 text-text-primary">
+							<tr class="border-b border-surface-200">
+								<td class="py-4 px-4">
 									{t(locale, `product.specs.${spec}.label`)}
 								</td>
 								<td class="py-4 px-4 text-right">

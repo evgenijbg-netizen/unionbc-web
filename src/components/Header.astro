@@ -24,7 +24,7 @@ const navItems = [
 		<!-- Logo -->
 		<a
 			href={getLocalizedPath("home", locale)}
-			class="font-heading font-bold text-xl text-text-primary tracking-tight hover:text-accent-400 transition-colors"
+			class="font-heading font-bold text-xl text-text-light tracking-tight hover:text-accent-400 transition-colors"
 		>
 			TEMP-COAT
 		</a>
@@ -38,7 +38,7 @@ const navItems = [
 						"text-sm font-medium transition-colors",
 						pageKey === item.key
 							? "text-accent-400"
-							: "text-text-secondary hover:text-text-primary",
+							: "text-text-light hover:text-accent-400",
 					]}
 				>
 					{item.label}
@@ -50,7 +50,7 @@ const navItems = [
 		<!-- Mobile hamburger button -->
 		<button
 			type="button"
-			class="md:hidden text-text-secondary hover:text-text-primary transition-colors"
+			class="md:hidden text-text-light hover:text-accent-400 transition-colors"
 			aria-label="Toggle menu"
 			aria-expanded="false"
 			id="mobile-menu-btn"
@@ -88,7 +88,7 @@ const navItems = [
 					"block py-2 text-sm font-medium transition-colors",
 					pageKey === item.key
 						? "text-accent-400"
-						: "text-text-secondary hover:text-text-primary",
+						: "text-text-light hover:text-accent-400",
 				]}
 			>
 				{item.label}

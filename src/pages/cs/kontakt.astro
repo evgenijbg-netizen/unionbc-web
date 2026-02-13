@@ -13,7 +13,7 @@ const locale: Locale = "cs";
 	<div class="max-w-5xl mx-auto px-6 py-16">
 		{/* Page heading */}
 		<header class="mb-12 text-center">
-			<h1 class="text-4xl md:text-5xl font-heading font-bold text-text-primary mb-4">
+			<h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">
 				{t(locale, "contact.page.title")}
 			</h1>
 			<p class="text-lg text-text-secondary max-w-2xl mx-auto">
@@ -22,9 +22,9 @@ const locale: Locale = "cs";
 		</header>
 
 		{/* Contact person card */}
-		<div class="bg-surface-800 border border-accent-500/30 rounded-lg p-8 mb-8">
+		<div class="bg-surface-200 border border-accent-500/30 rounded-lg p-8 mb-8">
 			<div class="text-center">
-				<h2 class="text-2xl font-heading font-bold text-text-primary mb-2">
+				<h2 class="text-2xl font-heading font-bold mb-2">
 					{t(locale, "contact.person.name")}
 				</h2>
 				<p class="text-accent-400 font-medium mb-1">
@@ -39,7 +39,7 @@ const locale: Locale = "cs";
 		{/* Contact details grid */}
 		<div class="grid md:grid-cols-2 gap-6 mb-8">
 			{/* Phone */}
-			<div class="bg-surface-800 border border-surface-700 rounded-lg p-6">
+			<div class="bg-surface-200 border border-surface-200 rounded-lg p-6">
 				<h3 class="text-sm font-bold text-text-secondary uppercase tracking-wide mb-3">
 					{t(locale, "contact.phone.label")}
 				</h3>
@@ -52,7 +52,7 @@ const locale: Locale = "cs";
 			</div>
 
 			{/* Email */}
-			<div class="bg-surface-800 border border-surface-700 rounded-lg p-6">
+			<div class="bg-surface-200 border border-surface-200 rounded-lg p-6">
 				<h3 class="text-sm font-bold text-text-secondary uppercase tracking-wide mb-3">
 					{t(locale, "contact.email.label")}
 				</h3>
@@ -65,11 +65,11 @@ const locale: Locale = "cs";
 			</div>
 
 			{/* Address */}
-			<div class="bg-surface-800 border border-surface-700 rounded-lg p-6">
+			<div class="bg-surface-200 border border-surface-200 rounded-lg p-6">
 				<h3 class="text-sm font-bold text-text-secondary uppercase tracking-wide mb-3">
 					{t(locale, "contact.address.label")}
 				</h3>
-				<p class="text-lg text-text-primary mb-3">
+				<p class="text-lg mb-3">
 					{t(locale, "contact.address.value")}
 				</p>
 				<a
@@ -91,11 +91,11 @@ const locale: Locale = "cs";
 			</div>
 
 			{/* Company info */}
-			<div class="bg-surface-800 border border-surface-700 rounded-lg p-6">
+			<div class="bg-surface-200 border border-surface-200 rounded-lg p-6">
 				<h3 class="text-sm font-bold text-text-secondary uppercase tracking-wide mb-3">
 					{t(locale, "contact.company.name")}
 				</h3>
-				<p class="text-lg text-text-primary">
+				<p class="text-lg">
 					<span class="text-text-secondary">{t(locale, "contact.company.id.label")}:</span>
 					{" "}
 					{t(locale, "contact.company.id.value")}
@@ -105,7 +105,7 @@ const locale: Locale = "cs";
 
 		{/* CTA section */}
 		<div class="bg-gradient-to-br from-accent-500/10 to-accent-500/5 border border-accent-500/30 rounded-lg p-8 text-center">
-			<h2 class="text-2xl md:text-3xl font-heading font-bold text-text-primary mb-3">
+			<h2 class="text-2xl md:text-3xl font-heading font-bold mb-3">
 				{t(locale, "contact.cta.title")}
 			</h2>
 			<p class="text-text-secondary mb-6 max-w-2xl mx-auto">
@@ -114,7 +114,7 @@ const locale: Locale = "cs";
 			<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
 				<a
 					href={`tel:${t(locale, "footer.phone").replace(/\s/g, "")}`}
-					class="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-surface-900 font-heading font-bold py-3 px-8 rounded transition-colors"
+					class="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-heading font-bold py-3 px-8 rounded transition-colors"
 				>
 					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path
@@ -128,7 +128,7 @@ const locale: Locale = "cs";
 				</a>
 				<a
 					href={`mailto:${t(locale, "footer.email")}`}
-					class="inline-flex items-center gap-2 bg-surface-700 hover:bg-surface-600 text-text-primary font-heading font-bold py-3 px-8 rounded transition-colors"
+					class="inline-flex items-center gap-2 bg-surface-700 hover:bg-surface-600 text-white font-heading font-bold py-3 px-8 rounded transition-colors"
 				>
 					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path

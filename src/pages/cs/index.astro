@@ -32,7 +32,7 @@ const industries = ["cement", "refinery", "food", "brewery", "paper", "construct
 			<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
 				<a
 					href={getLocalizedPath("contact", locale)}
-					class="inline-block bg-accent-500 hover:bg-accent-400 text-surface-900 font-heading font-semibold px-8 py-3 rounded-sm transition"
+					class="inline-block bg-accent-500 hover:bg-accent-400 text-white font-heading font-semibold px-8 py-3 rounded-sm transition"
 				>
 					{t(locale, "cta.consultation")}
 				</a>
@@ -49,7 +49,7 @@ const industries = ["cement", "refinery", "food", "brewery", "paper", "construct
 	<!-- Key Stats Section (Enhanced to 4 cards) -->
 	<section class="py-16 px-6">
 		<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-			<div class="bg-surface-800 border border-surface-700 rounded p-6 text-center">
+			<div class="bg-surface-200 border border-surface-200 rounded p-6 text-center">
 				<p class="text-2xl font-heading text-accent-400 mb-2">
 					{t(locale, "home.stats.temp_range")}
 				</p>
@@ -57,7 +57,7 @@ const industries = ["cement", "refinery", "food", "brewery", "paper", "construct
 					{t(locale, "home.stats.temp_range_label")}
 				</p>
 			</div>
-			<div class="bg-surface-800 border border-surface-700 rounded p-6 text-center">
+			<div class="bg-surface-200 border border-surface-200 rounded p-6 text-center">
 				<p class="text-2xl font-heading text-accent-400 mb-2">
 					{t(locale, "home.stats.conductivity")}
 				</p>
@@ -65,7 +65,7 @@ const industries = ["cement", "refinery", "food", "brewery", "paper", "construct
 					{t(locale, "home.stats.conductivity_label")}
 				</p>
 			</div>
-			<div class="bg-surface-800 border border-surface-700 rounded p-6 text-center">
+			<div class="bg-surface-200 border border-surface-200 rounded p-6 text-center">
 				<p class="text-2xl font-heading text-accent-400 mb-2">
 					{t(locale, "home.stats.application")}
 				</p>
@@ -73,7 +73,7 @@ const industries = ["cement", "refinery", "food", "brewery", "paper", "construct
 					{t(locale, "home.stats.application_label")}
 				</p>
 			</div>
-			<div class="bg-surface-800 border border-surface-700 rounded p-6 text-center">
+			<div class="bg-surface-200 border border-surface-200 rounded p-6 text-center">
 				<p class="text-2xl font-heading text-accent-400 mb-2">
 					{t(locale, "home.stats.certified")}
 				</p>
@@ -85,7 +85,7 @@ const industries = ["cement", "refinery", "food", "brewery", "paper", "construct
 	</section>
 
 	<!-- Why TC101 Section -->
-	<section class="py-16 px-6 bg-surface-800">
+	<section class="py-16 px-6 bg-surface-100">
 		<div class="max-w-6xl mx-auto">
 			<h2 class="text-3xl md:text-4xl font-heading font-bold text-text-primary text-center mb-12">
 				{t(locale, "home.why.title")}
@@ -132,7 +132,7 @@ const industries = ["cement", "refinery", "food", "brewery", "paper", "construct
 			<div class="flex flex-wrap gap-3 justify-center">
 				{
 					industries.map((industry) => (
-						<span class="bg-surface-800 border border-surface-700 px-4 py-2 rounded-full text-sm text-text-secondary">
+						<span class="bg-surface-200 border border-surface-200 px-4 py-2 rounded-full text-sm text-text-secondary">
 							{t(locale, `home.industries.${industry}`)}
 						</span>
 					))
@@ -142,7 +142,7 @@ const industries = ["cement", "refinery", "food", "brewery", "paper", "construct
 	</section>
 
 	<!-- CTA Section -->
-	<section class="py-16 px-6 bg-surface-800">
+	<section class="py-16 px-6 bg-surface-100">
 		<div class="max-w-3xl mx-auto text-center">
 			<h2 class="text-3xl md:text-4xl font-heading font-bold text-text-primary mb-4">
 				{t(locale, "home.cta.title")}
@@ -152,7 +152,7 @@ const industries = ["cement", "refinery", "food", "brewery", "paper", "construct
 			</p>
 			<a
 				href={getLocalizedPath("contact", locale)}
-				class="inline-block bg-accent-500 hover:bg-accent-400 text-surface-900 font-heading font-semibold px-8 py-3 rounded-sm transition"
+				class="inline-block bg-accent-500 hover:bg-accent-400 text-white font-heading font-semibold px-8 py-3 rounded-sm transition"
 			>
 				{t(locale, "home.cta.button")}
 			</a>
