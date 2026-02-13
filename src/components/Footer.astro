@@ -25,13 +25,9 @@ const currentYear = new Date().getFullYear();
 			<!-- Column 1: Company info -->
 			<div>
 				<!-- Logo: Union B+C Variant D (light text for dark bg) -->
-				<a href={getLocalizedPath("home", locale)} class="inline-block mb-4 hover:opacity-80 transition-opacity" aria-label="UNION B+C s.r.o.">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 50" class="h-7 w-auto" aria-hidden="true">
-						<text y="36" font-family="'Outfit Variable', sans-serif" font-size="32" font-weight="700" letter-spacing="0.12em" fill="#FFFFFF">
-							<tspan x="0">UNION B</tspan><tspan fill="#00B8A9" font-weight="400">+</tspan><tspan fill="#FFFFFF">C</tspan>
-						</text>
-						<text x="330" y="36" font-family="'Outfit Variable', sans-serif" font-size="13" font-weight="300" letter-spacing="0.08em" fill="rgba(255,255,255,0.3)">s.r.o.</text>
-					</svg>
+				<a href={getLocalizedPath("home", locale)} class="inline-flex items-baseline gap-2 mb-4 hover:opacity-80 transition-opacity" aria-label="UNION B+C s.r.o.">
+					<span class="font-heading font-bold text-xl tracking-[0.12em] text-white leading-none">UNION B<span class="text-[#00B8A9] font-normal">+</span>C</span>
+					<span class="font-heading font-light text-[0.6rem] tracking-[0.08em] text-white/30 leading-none">s.r.o.</span>
 				</a>
 				<p class="font-heading font-bold text-text-light text-lg mb-2">
 					{t(locale, "footer.company")}
