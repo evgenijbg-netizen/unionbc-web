@@ -15,6 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation & Design System** - Bilingual architecture, responsive layout, industrial design system, hosting
 - [x] **Phase 2: Content & Conversion** - All product pages, resources, FAQ, contact, CTAs with from-scratch bilingual content
 - [x] **Phase 02.1: Visual Refresh & Content Accuracy (INSERTED)** - Light palette, real images, factual claims audit
+- [ ] **Phase 02.2: Content Restructuring & Product Image (INSERTED)** - Dedicated applications page, TC101 bucket image
 - [ ] **Phase 3: Interactive Calculator** - Energy savings calculator as isolated Preact island with validated formulas
 - [ ] **Phase 4: Launch & SEO Migration** - Structured data, SEO audit, 301 redirects, go-live
 
@@ -73,6 +74,21 @@ Plans:
 - [x] 02.1-04-PLAN.md -- Credible messaging rewrite (safety-first positioning, remove inflated thermal claims)
 - [x] 02.1-05-PLAN.md -- Brand manual alignment (Outfit font, navy/teal palette, Union B+C logo)
 
+### Phase 02.2: Content Restructuring & Product Image (INSERTED)
+
+**Goal:** Application areas and application guide have their own dedicated page (not buried in certificates), and the site features a professional TC101 product bucket photo
+**Depends on:** Phase 02.1
+**Success Criteria** (what must be TRUE):
+  1. "Oblasti použití" (application examples by industry) and "Jak se používá" (application guide) are on a dedicated page, not on the certificates page
+  2. Certificates page contains only documents and test results
+  3. New page is accessible from main navigation in both CZ and EN
+  4. TC101 bucket product image (from zdrojové obrázky/tc101.png) is optimized via Astro Image and visible on product page or homepage
+  5. Site builds without errors and navigation works correctly
+**Plans:** 1 plan
+
+Plans:
+- [ ] 02.2-01-PLAN.md -- Move application sections to dedicated page, add TC101 bucket image, update nav
+
 ### Phase 3: Interactive Calculator
 **Goal**: Visitors can estimate their energy savings and payback period using an interactive calculator, turning the site from a brochure into a sales tool
 **Depends on**: Phase 2 (calculator references product spec data established in Phase 2)
@@ -111,5 +127,6 @@ Phases execute in numeric order: 1 --> 2 --> 02.1 --> 3 --> 4
 | 1. Foundation & Design System | 3/3 | Complete | 2026-02-13 |
 | 2. Content & Conversion | 3/3 | Complete | 2026-02-13 |
 | 02.1. Visual Refresh & Content Accuracy | 5/5 | Complete | 2026-02-13 |
+| 02.2. Content Restructuring & Product Image | 0/1 | Not started | - |
 | 3. Interactive Calculator | 0/1 | Not started | - |
 | 4. Launch & SEO Migration | 0/1 | Not started | - |
