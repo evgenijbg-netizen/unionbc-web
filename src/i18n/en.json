@@ -22,7 +22,7 @@
 	"home.stats.temp_range": "-60 °C to +260 °C",
 	"home.stats.temp_range_label": "Temperature range",
 	"home.stats.conductivity": "0.001 W/m·°C",
-	"home.stats.conductivity_label": "Thermal conductivity",
+	"home.stats.conductivity_label": "Thermal conductivity (per manufacturer testing)",
 	"home.stats.application": "Applied like paint",
 	"home.stats.application_label": "Application",
 	"home.stats.certified": "Certified in CZ",

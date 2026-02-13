@@ -22,7 +22,7 @@
 	"home.stats.temp_range": "-60 °C až +260 °C",
 	"home.stats.temp_range_label": "Teplotní rozsah",
 	"home.stats.conductivity": "0.001 W/m·°C",
-	"home.stats.conductivity_label": "Tepelná vodivost",
+	"home.stats.conductivity_label": "Tepelná vodivost (dle měření výrobce)",
 	"home.stats.application": "Nanáší se jako nátěr",
 	"home.stats.application_label": "Aplikace",
 	"home.stats.certified": "Certifikováno v ČR",
