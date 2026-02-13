@@ -1,0 +1,40 @@
+---
+import { getLocalizedPath } from "../../i18n/routes";
+import { type Locale, t } from "../../i18n/utils";
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<section class="bg-gradient-to-b from-surface-800 to-surface-900 py-20 px-6">
+	<div class="max-w-4xl mx-auto text-center">
+		<h1 class="text-4xl md:text-6xl font-heading font-bold text-text-primary mb-6">
+			{t(locale, "product.hero.title")}
+		</h1>
+		<p class="text-xl md:text-2xl text-accent-400 mb-6">
+			{t(locale, "product.hero.subtitle")}
+		</p>
+		<p class="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
+			{t(locale, "product.hero.description")}
+		</p>
+		<div class="bg-surface-700 border border-surface-600 rounded-lg p-6 inline-block mb-8">
+			<p class="text-4xl font-heading font-bold text-accent-400 mb-2">
+				{t(locale, "product.hero.stat")}
+			</p>
+			<p class="text-sm text-text-secondary">
+				{t(locale, "product.hero.statLabel")}
+			</p>
+		</div>
+		<div>
+			<a
+				href={getLocalizedPath("contact", locale)}
+				class="inline-block bg-accent-500 hover:bg-accent-400 text-surface-900 font-heading font-semibold px-8 py-3 rounded-sm transition"
+			>
+				{t(locale, "product.hero.cta")}
+			</a>
+		</div>
+	</div>
+</section>

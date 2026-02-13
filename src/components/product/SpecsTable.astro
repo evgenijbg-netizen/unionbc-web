@@ -1,0 +1,60 @@
+---
+import { type Locale, t } from "../../i18n/utils";
+import SectionHeading from "../shared/SectionHeading.astro";
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const specs = [
+	"density",
+	"conductivity",
+	"heatCapacity",
+	"tempRange",
+	"vaporPermeability",
+	"weight",
+	"elongation",
+	"consumption",
+];
+---
+
+<section class="py-16 px-6">
+	<div class="max-w-4xl mx-auto">
+		<SectionHeading title={t(locale, "product.specs.title")} />
+		<div class="overflow-x-auto">
+			<table class="w-full border-collapse">
+				<thead>
+					<tr class="border-b border-surface-700">
+						<th class="text-left py-3 px-4 text-text-secondary font-heading font-semibold">
+							{t(locale, "product.specs.parameterLabel")}
+						</th>
+						<th class="text-right py-3 px-4 text-text-secondary font-heading font-semibold">
+							{t(locale, "product.specs.valueLabel")}
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{
+						specs.map((spec) => (
+							<tr class="border-b border-surface-800">
+								<td class="py-4 px-4 text-text-primary">
+									{t(locale, `product.specs.${spec}.label`)}
+								</td>
+								<td class="py-4 px-4 text-right">
+									<p class="text-accent-400 font-heading font-semibold mb-1">
+										{t(locale, `product.specs.${spec}.value`)}
+									</p>
+									<p class="text-sm text-text-secondary">
+										{t(locale, `product.specs.${spec}.context`)}
+									</p>
+								</td>
+							</tr>
+						))
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,42 @@
+---
+import { type Locale, t } from "../../i18n/utils";
+import SectionHeading from "../shared/SectionHeading.astro";
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const steps = [
+	{ key: "step1", number: "01" },
+	{ key: "step2", number: "02" },
+	{ key: "step3", number: "03" },
+];
+---
+
+<section class="py-16 px-6 bg-surface-900">
+	<div class="max-w-5xl mx-auto">
+		<SectionHeading
+			title={t(locale, "product.howItWorks.title")}
+			subtitle={t(locale, "product.howItWorks.intro")}
+		/>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+			{
+				steps.map((step) => (
+					<div class="bg-surface-800 border border-surface-700 rounded-lg p-6">
+						<div class="text-4xl font-heading font-bold text-accent-400 mb-4">
+							{step.number}
+						</div>
+						<h3 class="text-xl font-heading font-semibold text-text-primary mb-3">
+							{t(locale, `product.howItWorks.${step.key}.title`)}
+						</h3>
+						<p class="text-text-secondary">
+							{t(locale, `product.howItWorks.${step.key}.description`)}
+						</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

@@ -1,0 +1,60 @@
+---
+import { type Locale, t } from "../../i18n/utils";
+import SectionHeading from "../shared/SectionHeading.astro";
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const advantages = [
+	"timeSaving",
+	"noScaffolding",
+	"fireResistant",
+	"lightweight",
+	"antiCorrosion",
+	"vaporPermeable",
+	"flexible",
+	"wideTemp",
+];
+---
+
+<section class="py-16 px-6">
+	<div class="max-w-6xl mx-auto">
+		<SectionHeading title={t(locale, "product.advantages.title")} />
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+			{
+				advantages.map((adv) => (
+					<div class="bg-surface-800 border border-surface-700 rounded-lg p-6">
+						<div class="flex items-start gap-4">
+							<div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-500/20 flex items-center justify-center">
+								<svg
+									class="w-5 h-5 text-accent-400"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M5 13l4 4L19 7"
+									/>
+								</svg>
+							</div>
+							<div class="flex-1">
+								<h3 class="text-lg font-heading font-semibold text-text-primary mb-2">
+									{t(locale, `product.advantages.${adv}.title`)}
+								</h3>
+								<p class="text-text-secondary">
+									{t(locale, `product.advantages.${adv}.description`)}
+								</p>
+							</div>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
