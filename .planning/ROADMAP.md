@@ -46,12 +46,12 @@ Plans:
   3. Visitor can browse categorized FAQ (accordion UI), download certificates/documents as PDF, view application examples by industry, see test results with thermal imaging, and read an application guide
   4. Contact information (phone, email, address) is visible in the footer on every page and on a dedicated contact page, plus a persistent sticky "Request consultation" CTA during scroll
   5. All content reads as native modern Czech (and native English) written from scratch -- no Russian-translated phrasing, all technical claims backed by Czech certifications with measurement context
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Homepage and product page (hero, specs, how-it-works, advantages, comparison)
-- [ ] 02-02: Resource pages (FAQ, certificates, application examples, test results, application guide)
-- [ ] 02-03: Contact page, footer contact info, sticky CTA, content quality review
+- [ ] 02-01-PLAN.md -- Product page (specs, how-it-works, advantages, comparison) and enhanced homepage with full content
+- [ ] 02-02-PLAN.md -- FAQ page with categorized accordion and Resources page (certificates, test results, application examples, guide)
+- [ ] 02-03-PLAN.md -- Contact page, sticky CTA bar, i18n parity verification, human content review
 
 ### Phase 3: Interactive Calculator
 **Goal**: Visitors can estimate their energy savings and payback period using an interactive calculator, turning the site from a brochure into a sales tool
