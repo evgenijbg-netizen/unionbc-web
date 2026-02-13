@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-12)
 
 ## Current Position
 
-Phase: 02.1 COMPLETE -- Moving to Phase 3
-Plan: 5 of 5 in Phase 02.1 (all complete, verified)
-Status: Phase 02.1 verified -- light palette, real images, accurate claims, credible messaging, brand identity aligned
-Last activity: 2026-02-13 -- Phase 02.1 verification passed (5/5 must-haves)
+Phase: 02.2-content-restructuring-product-image
+Plan: 1 of 1 (complete)
+Status: Phase 02.2 complete -- applications page created, certificates restructured, TC101 bucket image on homepage
+Last activity: 2026-02-13 -- Completed plan 02.2-01
 
-Progress: [████████░░] 82%
+Progress: [████████░░] 83%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
+- Total plans completed: 10
 - Average duration: 5.4 min
-- Total execution time: 0.81 hours
+- Total execution time: 0.90 hours
 
 **By Phase:**
 
@@ -30,10 +30,11 @@ Progress: [████████░░] 82%
 | 01-foundation-design-system | 3/3 | 15 min | 5 min |
 | 02-content-conversion | 3/3 | 22 min | 7.3 min |
 | 02.1-visual-refresh-content-accuracy | 5/5 | 25 min | 5 min |
+| 02.2-content-restructuring-product-image | 1/1 | 5 min | 5 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (9 min), 02-03 (5 min), 02.1-01 (6 min), 02.1-05 (3 min)
-- Trend: Recent plans averaging 5.8 min
+- Last 5 plans: 02-03 (5 min), 02.1-01 (6 min), 02.1-05 (3 min), 02.2-01 (5 min)
+- Trend: Recent plans averaging 4.8 min
 
 *Updated after each plan completion*
 
@@ -75,10 +76,13 @@ Recent decisions affecting current work:
 - [Phase 02.1-05]: Inline SVG for logo instead of img tag -- ensures Outfit Variable font renders correctly from page fontsource load
 - [Phase 02.1-05]: Dark logo variant (white text) for both header and footer since both have dark navy backgrounds
 - [Phase 02.1-05]: OKLCH values derived mathematically from brand hex codes: navy #1B2A4A, teal #00B8A9, cool grey #7A8599
+- [Phase 02.2-01]: Content type separation - Certificates page for official documents/tests only, Applications page for usage guidance
+- [Phase 02.2-01]: TC101 bucket image displayed on homepage as primary product visual
 
 ### Roadmap Evolution
 
 - Phase 02.1 inserted after Phase 2: Visual Refresh & Content Accuracy (URGENT) -- light color palette, images from old site + stock, factual claims audit
+- Phase 02.2 inserted after Phase 02.1: Content Restructuring & Product Image -- applications page split, TC101 bucket image added
 
 ### Pending Todos
 
@@ -93,5 +97,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-13
-Stopped at: Phase 02.1 complete and verified (5/5 must-haves passed)
-Resume file: .planning/phases/02.1-visual-refresh-content-accuracy/02.1-VERIFICATION.md
+Stopped at: Phase 02.2-01 complete (applications page created, TC101 bucket image added)
+Resume file: .planning/phases/02.2-content-restructuring-product-image/02.2-01-SUMMARY.md
