@@ -26,9 +26,9 @@
 	--color-text-dark: oklch(0.15 0.01 250); /* Headings, emphasis */
 	--color-text-light: oklch(0.95 0.005 250); /* Text on dark backgrounds (header/footer) */
 
-	/* Typography -- Space Grotesk for headings (Czech designer, geometric/technical feel), Inter for body */
-	--font-heading: "Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
-	--font-body: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+	/* Typography -- Outfit for both headings and body (brand manual) */
+	--font-heading: "Outfit Variable", ui-sans-serif, system-ui, sans-serif;
+	--font-body: "Outfit Variable", ui-sans-serif, system-ui, sans-serif;
 
 	/* Spacing base */
 	--spacing: 4px;
