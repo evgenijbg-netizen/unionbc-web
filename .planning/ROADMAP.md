@@ -16,6 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Content & Conversion** - All product pages, resources, FAQ, contact, CTAs with from-scratch bilingual content
 - [x] **Phase 02.1: Visual Refresh & Content Accuracy (INSERTED)** - Light palette, real images, factual claims audit
 - [x] **Phase 02.2: Content Restructuring & Product Image (INSERTED)** - Dedicated applications page, TC101 bucket image
+- [ ] **Phase 02.3: Messaging Rewrite & Tone of Voice (INSERTED)** - Problem-first messaging, new sections, CTA rewrite, reference placeholder
 - [ ] **Phase 3: Interactive Calculator** - Energy savings calculator as isolated Preact island with validated formulas
 - [ ] **Phase 4: Launch & SEO Migration** - Structured data, SEO audit, 301 redirects, go-live
 
@@ -89,6 +90,26 @@ Plans:
 Plans:
 - [x] 02.2-01-PLAN.md -- Move application sections to dedicated page, add TC101 bucket image, update nav
 
+### Phase 02.3: Messaging Rewrite & Tone of Voice (INSERTED)
+
+**Goal:** Site communicates as a technical partner solving industrial problems, not a product catalog — with problem-first messaging, concrete use cases, and credible CTA language
+**Depends on:** Phase 02.2
+**Success Criteria** (what must be TRUE):
+  1. Homepage hero leads with problem/solution ("Snižujeme tepelné ztráty bez odstávky") not product description ("TC101 je izolační nátěr")
+  2. Homepage includes "Pro koho je řešení určeno" section (target industries) and "Proč UNION B+C" section (differentiators)
+  3. Product page benefits are rewritten as customer outcomes (safety, no downtime, corrosion protection) not feature descriptions
+  4. Product page includes "Postup spolupráce" (cooperation workflow: consultation → assessment → proposal → realization)
+  5. All CTAs say "Požádejte o technickou konzultaci" / "Request technical consultation" not generic "Kontaktujte nás"
+  6. Reference section exists with structured placeholder (will be populated with real data later)
+  7. No marketing superlatives — tone is factual, technical, solution-oriented
+  8. All changes in both CZ and EN, site builds with 0 errors
+**Plans:** 3 plans
+
+Plans:
+- [ ] 02.3-01-PLAN.md -- Homepage messaging rewrite (problem-first hero, new sections, CTA language)
+- [ ] 02.3-02-PLAN.md -- Product page rewrite (outcome benefits, cooperation workflow, product CTA)
+- [ ] 02.3-03-PLAN.md -- Global CTA harmonization, reference placeholder, tone audit, i18n cleanup
+
 ### Phase 3: Interactive Calculator
 **Goal**: Visitors can estimate their energy savings and payback period using an interactive calculator, turning the site from a brochure into a sales tool
 **Depends on**: Phase 2 (calculator references product spec data established in Phase 2)
@@ -120,7 +141,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 --> 2 --> 02.1 --> 02.2 --> 3 --> 4
+Phases execute in numeric order: 1 --> 2 --> 02.1 --> 02.2 --> 02.3 --> 3 --> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -128,5 +149,6 @@ Phases execute in numeric order: 1 --> 2 --> 02.1 --> 02.2 --> 3 --> 4
 | 2. Content & Conversion | 3/3 | Complete | 2026-02-13 |
 | 02.1. Visual Refresh & Content Accuracy | 5/5 | Complete | 2026-02-13 |
 | 02.2. Content Restructuring & Product Image | 1/1 | Complete | 2026-02-13 |
+| 02.3. Messaging Rewrite & Tone of Voice | 0/3 | In progress | - |
 | 3. Interactive Calculator | 0/1 | Not started | - |
 | 4. Launch & SEO Migration | 0/1 | Not started | - |
