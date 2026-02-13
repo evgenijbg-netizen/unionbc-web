@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-12)
 
 ## Current Position
 
-Phase: 02.2 COMPLETE -- Moving to Phase 3
-Plan: 1 of 1 in Phase 02.2 (all complete, verified)
-Status: Phase 02.2 verified -- applications page split from certificates, TC101 bucket image on homepage
-Last activity: 2026-02-13 -- Phase 02.2 verification passed (6/6 must-haves)
+Phase: 02.3-messaging-rewrite-tone-of-voice
+Plan: 1 of 3 (plan 01 complete)
+Status: Homepage rewritten with problem-first messaging — 4 new sections, technical consultation CTAs
+Last activity: 2026-02-13 -- Completed 02.3-01-PLAN.md (2 tasks, 4 files modified, build verified)
 
-Progress: [████████░░] 85%
+Progress: [████████░░] 87%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: 5.4 min
-- Total execution time: 0.90 hours
+- Total plans completed: 11
+- Average duration: 5.3 min
+- Total execution time: 0.97 hours
 
 **By Phase:**
 
@@ -31,10 +31,11 @@ Progress: [████████░░] 85%
 | 02-content-conversion | 3/3 | 22 min | 7.3 min |
 | 02.1-visual-refresh-content-accuracy | 5/5 | 25 min | 5 min |
 | 02.2-content-restructuring-product-image | 1/1 | 5 min | 5 min |
+| 02.3-messaging-rewrite-tone-of-voice | 1/3 | 4 min | 4 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-03 (5 min), 02.1-01 (6 min), 02.1-05 (3 min), 02.2-01 (5 min)
-- Trend: Recent plans averaging 4.8 min
+- Last 5 plans: 02.1-01 (6 min), 02.1-05 (3 min), 02.2-01 (5 min), 02.3-01 (4 min)
+- Trend: Recent plans averaging 4.5 min
 
 *Updated after each plan completion*
 
@@ -78,11 +79,15 @@ Recent decisions affecting current work:
 - [Phase 02.1-05]: OKLCH values derived mathematically from brand hex codes: navy #1B2A4A, teal #00B8A9, cool grey #7A8599
 - [Phase 02.2-01]: Content type separation - Certificates page for official documents/tests only, Applications page for usage guidance
 - [Phase 02.2-01]: TC101 bucket image displayed on homepage as primary product visual
+- [Phase 02.3-01]: Hero messaging leads with problem/solution statement ("Snižujeme tepelné ztráty") not product name
+- [Phase 02.3-01]: Homepage restructured to 8 sections with problem-first flow (pain points → solution → target → differentiators)
+- [Phase 02.3-01]: All CTAs updated to "technical consultation" language instead of generic "contact us"
 
 ### Roadmap Evolution
 
 - Phase 02.1 inserted after Phase 2: Visual Refresh & Content Accuracy (URGENT) -- light color palette, images from old site + stock, factual claims audit
 - Phase 02.2 inserted after Phase 02.1: Content Restructuring & Product Image -- applications page split, TC101 bucket image added
+- Phase 02.3 inserted after Phase 02.2: Messaging Rewrite & Tone of Voice -- problem-first messaging, new homepage sections, CTA rewrite, reference placeholder
 
 ### Pending Todos
 
@@ -97,5 +102,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-13
-Stopped at: Phase 02.2 complete and verified (6/6 must-haves passed)
-Resume file: .planning/phases/02.2-content-restructuring-product-image/02.2-VERIFICATION.md
+Stopped at: Completed 02.3-01-PLAN.md
+Resume file: .planning/phases/02.3-messaging-rewrite-tone-of-voice/02.3-01-SUMMARY.md
