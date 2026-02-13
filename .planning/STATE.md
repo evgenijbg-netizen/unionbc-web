@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-12)
 ## Current Position
 
 Phase: 1 of 4 (Foundation & Design System)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: Executing
-Last activity: 2026-02-13 -- Completed 01-01 (Project Scaffolding)
+Last activity: 2026-02-13 -- Completed 01-02 (i18n System and Layout Shell)
 
-Progress: [█░░░░░░░░░] 8%
+Progress: [██░░░░░░░░] 17%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 6 min
-- Total execution time: 0.1 hours
+- Total plans completed: 2
+- Average duration: 5.5 min
+- Total execution time: 0.2 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation-design-system | 1/3 | 6 min | 6 min |
+| 01-foundation-design-system | 2/3 | 11 min | 5.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (6 min)
-- Trend: N/A (first plan)
+- Last 5 plans: 01-01 (6 min), 01-02 (5 min)
+- Trend: Stable
 
 *Updated after each plan completion*
 
@@ -50,6 +50,10 @@ Recent decisions affecting current work:
 - [01-01]: CSS-first design tokens via @theme directive -- no tailwind.config.js
 - [01-01]: Biome v2.3.15 with tailwindDirectives CSS parser and includes-based file scoping
 - [01-01]: pnpm 10.x as package manager (installed globally during execution)
+- [01-02]: Flat dot-separated JSON keys for i18n (not nested objects) -- simpler t() lookup
+- [01-02]: Biome .astro override disables noUnusedImports/noUnusedVariables (false positives from experimental Astro support)
+- [01-02]: Added @astrojs/check for TypeScript verification of Astro components
+- [01-02]: Excluded www/ directory from TypeScript checking via tsconfig exclude
 
 ### Pending Todos
 
@@ -64,5 +68,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-13
-Stopped at: Completed 01-01-PLAN.md (Project Scaffolding)
-Resume file: .planning/phases/01-foundation-design-system/01-01-SUMMARY.md
+Stopped at: Completed 01-02-PLAN.md (i18n System and Layout Shell)
+Resume file: .planning/phases/01-foundation-design-system/01-02-SUMMARY.md
