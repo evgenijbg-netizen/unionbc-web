@@ -1,0 +1,45 @@
+# Cloudflare Pages redirect rules
+# Maps old unionbc.cz URLs to new bilingual site structure
+# All old-site redirects are 301 (permanent) to preserve SEO equity
+
+# Root redirect to Czech (default locale)
+/ /cs/ 302
+
+# Old Czech pages -> new Czech pages (301 permanent)
+/index.html /cs/ 301
+/home.html /cs/ 301
+/tepelna-izolace---tc-101.html /cs/produkt/ 301
+/o-tekute-izolaci.html /cs/produkt/ 301
+/jak-to-funguje-.html /cs/produkt/ 301
+/temp-coat-vyhody.html /cs/produkt/ 301
+/faq.html /cs/faq/ 301
+/certifikaty.html /cs/certifikaty/ 301
+/certifikat-usa.html /cs/certifikaty/ 301
+/kontakty.html /cs/kontakt/ 301
+/nase-testy.html /cs/certifikaty/ 301
+/media.html /cs/ 301
+/ostatni.html /cs/ 301
+/quick-gun.html /cs/ 301
+/zvukova-izolace---silent-running.html /cs/ 301
+/bezoplachovy-odrezova----q2.html /cs/ 301
+/polski.html /cs/ 301
+/imsitemap.html /cs/ 301
+
+# Old English pages -> new English pages (301 permanent)
+/eng/index2.html /en/ 301
+/eng/insulating-coating---tc-101.html /en/product/ 301
+/eng/faq.html /en/faq/ 301
+/eng/certificates.html /en/certificates/ 301
+/eng/certifikat-usa.html /en/certificates/ 301
+/eng/contacts.html /en/contact/ 301
+/eng/others---other-brands.html /en/ 301
+/eng/others---temp-coat-brand.html /en/ 301
+/eng/quick-gun.html /en/ 301
+/eng/-silent-running.html /en/ 301
+/eng/imsitemap.html /en/ 301
+
+# Old sitemap
+/sitemap.xml /sitemap-index.xml 301
+
+# PHP pages (old site had these)
+/pro-distributory.php /cs/ 301
