@@ -1,0 +1,114 @@
+---
+import ApplicationCard from "../../components/resources/ApplicationCard.astro";
+import ApplicationGuide from "../../components/resources/ApplicationGuide.astro";
+import SectionHeading from "../../components/shared/SectionHeading.astro";
+import { type Locale, t } from "../../i18n/utils";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const locale: Locale = "cs";
+const title = t(locale, "applications.meta.title");
+const description = t(locale, "applications.meta.description");
+---
+
+<BaseLayout title={title} description={description} pageKey="applications">
+	<div class="container mx-auto px-4 py-16">
+		<SectionHeading
+			title={t(locale, "applications.page.title")}
+			subtitle={t(locale, "applications.page.subtitle")}
+		/>
+
+		<!-- Application Examples Section -->
+		<section id="applications" class="mb-24">
+			<h2 class="text-3xl font-heading font-bold mb-8">
+				{t(locale, "certificates.sections.applications")}
+			</h2>
+
+			<div class="space-y-12">
+				<!-- Industry -->
+				<div>
+					<h3 class="text-2xl font-heading font-semibold mb-6 text-accent-500">
+						{t(locale, "certificates.app.industry.title")}
+					</h3>
+					<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+						<ApplicationCard
+							title={t(locale, "certificates.app.cement.title")}
+							description={t(locale, "certificates.app.cement.description")}
+							icon="C"
+						/>
+						<ApplicationCard
+							title={t(locale, "certificates.app.refinery.title")}
+							description={t(locale, "certificates.app.refinery.description")}
+							icon="R"
+						/>
+						<ApplicationCard
+							title={t(locale, "certificates.app.food.title")}
+							description={t(locale, "certificates.app.food.description")}
+							icon="P"
+						/>
+						<ApplicationCard
+							title={t(locale, "certificates.app.brewery.title")}
+							description={t(locale, "certificates.app.brewery.description")}
+							icon="P"
+						/>
+						<ApplicationCard
+							title={t(locale, "certificates.app.paper.title")}
+							description={t(locale, "certificates.app.paper.description")}
+							icon="P"
+						/>
+					</div>
+				</div>
+
+				<!-- Construction -->
+				<div>
+					<h3 class="text-2xl font-heading font-semibold mb-6 text-accent-500">
+						{t(locale, "certificates.app.construction.title")}
+					</h3>
+					<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+						<ApplicationCard
+							title={t(locale, "certificates.app.roofs.title")}
+							description={t(locale, "certificates.app.roofs.description")}
+							icon="S"
+						/>
+						<ApplicationCard
+							title={t(locale, "certificates.app.facades.title")}
+							description={t(locale, "certificates.app.facades.description")}
+							icon="F"
+						/>
+						<ApplicationCard
+							title={t(locale, "certificates.app.halls.title")}
+							description={t(locale, "certificates.app.halls.description")}
+							icon="H"
+						/>
+					</div>
+				</div>
+
+				<!-- Transport/Marine -->
+				<div>
+					<h3 class="text-2xl font-heading font-semibold mb-6 text-accent-500">
+						{t(locale, "certificates.app.transport.title")}
+					</h3>
+					<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+						<ApplicationCard
+							title={t(locale, "certificates.app.ships.title")}
+							description={t(locale, "certificates.app.ships.description")}
+							icon="L"
+						/>
+						<ApplicationCard
+							title={t(locale, "certificates.app.containers.title")}
+							description={t(locale, "certificates.app.containers.description")}
+							icon="K"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Application Guide Section -->
+		<section id="guide" class="mb-24">
+			<h2 class="text-3xl font-heading font-bold mb-8">
+				{t(locale, "certificates.sections.guide")}
+			</h2>
+			<ApplicationGuide locale={locale} />
+		</section>
+	</div>
+</BaseLayout>

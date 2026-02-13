@@ -7,6 +7,7 @@ export const routeMap: Record<Locale, Record<string, string>> = {
 		product: "produkt",
 		faq: "faq",
 		certificates: "certifikaty",
+		applications: "aplikace",
 		contact: "kontakt",
 	},
 	en: {
@@ -14,6 +15,7 @@ export const routeMap: Record<Locale, Record<string, string>> = {
 		product: "product",
 		faq: "faq",
 		certificates: "certificates",
+		applications: "applications",
 		contact: "contact",
 	},
 };
