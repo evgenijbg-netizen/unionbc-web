@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import StickyCtaBar from "../components/shared/StickyCtaBar.astro";
 import { getAlternatePath } from "../i18n/routes";
 import { getLocaleFromUrl, type Locale, locales, t } from "../i18n/utils";
 import "../styles/global.css";
@@ -48,9 +49,10 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 </head>
 <body class="bg-surface-900 text-text-primary font-body min-h-screen flex flex-col">
 	<Header locale={locale} pageKey={pageKey} />
-	<main class="flex-1">
+	<main class="flex-1 pb-16 md:pb-0">
 		<slot />
 	</main>
 	<Footer locale={locale} />
+	<StickyCtaBar locale={locale} />
 </body>
 </html>
