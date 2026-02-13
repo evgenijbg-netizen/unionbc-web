@@ -1,0 +1,22 @@
+---
+import FaqAccordion from "../../components/faq/FaqAccordion.astro";
+import SectionHeading from "../../components/shared/SectionHeading.astro";
+import { type Locale, t } from "../../i18n/utils";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const locale: Locale = "en";
+const title = t(locale, "faq.meta.title");
+const description = t(locale, "faq.meta.description");
+---
+
+<BaseLayout title={title} description={description} pageKey="faq">
+	<div class="container mx-auto px-4 py-16 max-w-3xl">
+		<SectionHeading
+			title={t(locale, "faq.page.title")}
+			subtitle={t(locale, "faq.page.subtitle")}
+		/>
+		<div class="mt-12">
+			<FaqAccordion locale={locale} />
+		</div>
+	</div>
+</BaseLayout>

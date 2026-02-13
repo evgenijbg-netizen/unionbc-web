@@ -1,0 +1,69 @@
+---
+import { type Locale, t } from "../../i18n/utils";
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+// FAQ structure: 4 categories with question IDs
+const faqCategories = [
+	{
+		id: "application",
+		questions: ["where_used", "how_much", "application_method", "layer_thickness", "primer"],
+	},
+	{
+		id: "technical",
+		questions: ["temp_range", "expansion", "weight", "drying_time"],
+	},
+	{
+		id: "maintenance",
+		questions: ["cleaning", "shelf_life", "curing"],
+	},
+	{
+		id: "safety",
+		questions: ["protection", "flammable", "certification", "materials"],
+	},
+];
+---
+
+<div class="faq-container space-y-12">
+	{
+		faqCategories.map((category) => (
+			<section>
+				<h2 class="text-2xl font-heading font-bold mb-6 text-accent-500">
+					{t(locale, `faq.category.${category.id}`)}
+				</h2>
+				<div class="space-y-2">
+					{category.questions.map((qId) => (
+						<details
+							name={`category-${category.id}`}
+							class="group border-b border-surface-700 last:border-b-0"
+						>
+							<summary class="py-4 px-2 cursor-pointer font-medium flex justify-between items-center hover:text-accent-500 transition-colors">
+								<span>{t(locale, `faq.${qId}.question`)}</span>
+								<svg
+									class="w-5 h-5 flex-shrink-0 ml-4 transition-transform group-open:rotate-180"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</summary>
+							<div class="pb-4 px-2 text-text-secondary leading-relaxed">
+								{t(locale, `faq.${qId}.answer`)}
+							</div>
+						</details>
+					))}
+				</div>
+			</section>
+		))
+	}
+</div>
