@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-12)
 
 **Core value:** Visitor understands what TEMP-COAT TC101 is, why it works, how much it saves -- and knows who to contact.
-**Current focus:** Phase 2: Content Conversion
+**Current focus:** Phase 02.1: Visual Refresh & Content Accuracy
 
 ## Current Position
 
 Phase: 02.1 of 4 (Visual Refresh & Content Accuracy) -- IN PROGRESS
-Plan: 2 of 3 in current phase
-Status: Light professional palette applied, dark header/footer framing, all 22 components updated
-Last activity: 2026-02-13 -- Completed 02.1-01-PLAN.md (2 tasks, 23 files, 6 min)
+Plan: 5 of 5 in current phase (02.1-04 still pending)
+Status: Brand identity applied -- Outfit font, navy/teal palette, Union B+C logo in header/footer
+Last activity: 2026-02-13 -- Completed 02.1-05-PLAN.md (3 tasks, 8 files, 3 min)
 
-Progress: [██████░░░░] 58%
+Progress: [███████░░░] 75%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
-- Average duration: 5.9 min
-- Total execution time: 0.73 hours
+- Total plans completed: 8
+- Average duration: 5.5 min
+- Total execution time: 0.78 hours
 
 **By Phase:**
 
@@ -29,11 +29,11 @@ Progress: [██████░░░░] 58%
 |-------|-------|-------|----------|
 | 01-foundation-design-system | 3/3 | 15 min | 5 min |
 | 02-content-conversion | 3/3 | 22 min | 7.3 min |
-| 02.1-visual-refresh-content-accuracy | 1/3 | 6 min | 6 min |
+| 02.1-visual-refresh-content-accuracy | 2/5 | 9 min | 4.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (9 min), 02-03 (5 min), 02.1-01 (6 min)
-- Trend: Recent plans averaging 6.7 min
+- Last 5 plans: 02-02 (9 min), 02-03 (5 min), 02.1-01 (6 min), 02.1-05 (3 min)
+- Trend: Recent plans averaging 5.8 min
 
 *Updated after each plan completion*
 
@@ -72,6 +72,9 @@ Recent decisions affecting current work:
 - [Phase 02.1-01]: Option B approach: kept semantic variable names (surface-50 = lightest) and updated both @theme values and component classes
 - [Phase 02.1-01]: Dark header/footer framing pattern - bg-surface-800 with text-text-light for professional visual hierarchy
 - [Phase 02.1-01]: Added text-light, surface-200, and surface-600 color tokens for light palette requirements
+- [Phase 02.1-05]: Inline SVG for logo instead of img tag -- ensures Outfit Variable font renders correctly from page fontsource load
+- [Phase 02.1-05]: Dark logo variant (white text) for both header and footer since both have dark navy backgrounds
+- [Phase 02.1-05]: OKLCH values derived mathematically from brand hex codes: navy #1B2A4A, teal #00B8A9, cool grey #7A8599
 
 ### Roadmap Evolution
 
@@ -90,5 +93,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-13
-Stopped at: Completed 02.1-01-PLAN.md (Light professional palette transformation)
-Resume file: .planning/phases/02.1-visual-refresh-content-accuracy/02.1-01-SUMMARY.md
+Stopped at: Completed 02.1-05-PLAN.md (Brand identity: Outfit font, navy/teal palette, Union B+C logo)
+Resume file: .planning/phases/02.1-visual-refresh-content-accuracy/02.1-05-SUMMARY.md
