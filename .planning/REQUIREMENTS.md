@@ -78,13 +78,35 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| *(populated by roadmapper)* | | |
+| PROD-01 | Phase 2: Content & Conversion | Pending |
+| PROD-02 | Phase 2: Content & Conversion | Pending |
+| PROD-03 | Phase 2: Content & Conversion | Pending |
+| PROD-04 | Phase 2: Content & Conversion | Pending |
+| PROD-05 | Phase 2: Content & Conversion | Pending |
+| CONT-01 | Phase 2: Content & Conversion | Pending |
+| CONT-02 | Phase 2: Content & Conversion | Pending |
+| CONT-03 | Phase 2: Content & Conversion | Pending |
+| CONT-04 | Phase 2: Content & Conversion | Pending |
+| CONT-05 | Phase 2: Content & Conversion | Pending |
+| CONV-01 | Phase 2: Content & Conversion | Pending |
+| CONV-02 | Phase 3: Interactive Calculator | Pending |
+| CONV-03 | Phase 2: Content & Conversion | Pending |
+| TECH-01 | Phase 1: Foundation & Design System | Pending |
+| TECH-02 | Phase 1: Foundation & Design System | Pending |
+| TECH-03 | Phase 4: Launch & SEO Migration | Pending |
+| TECH-04 | Phase 1: Foundation & Design System | Pending |
+| TECH-05 | Phase 1: Foundation & Design System | Pending |
+| TECH-06 | Phase 1: Foundation & Design System | Pending |
+| TECH-07 | Phase 4: Launch & SEO Migration | Pending |
+| QUAL-01 | Phase 2: Content & Conversion | Pending |
+| QUAL-02 | Phase 2: Content & Conversion | Pending |
+| QUAL-03 | Phase 2: Content & Conversion | Pending |
 
 **Coverage:**
-- v1 requirements: 20 total
-- Mapped to phases: 0
-- Unmapped: 20
+- v1 requirements: 23 total
+- Mapped to phases: 23
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-12*
-*Last updated: 2026-02-12 after initial definition*
+*Last updated: 2026-02-13 after roadmap creation*
