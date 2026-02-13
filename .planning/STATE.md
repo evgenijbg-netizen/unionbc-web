@@ -10,29 +10,29 @@ See: .planning/PROJECT.md (updated 2026-02-12)
 ## Current Position
 
 Phase: 2 of 4 (Content Conversion)
-Plan: 1 of 3 in current phase -- COMPLETE
-Status: Product page and enhanced homepage delivered
-Last activity: 2026-02-13 -- Completed 02-01-PLAN.md (2 tasks, 12 files, 8 min)
+Plan: 2 of 3 in current phase -- COMPLETE
+Status: FAQ and resources pages delivered
+Last activity: 2026-02-13 -- Completed 02-02-PLAN.md (2 tasks, 27 files, 9 min)
 
-Progress: [████░░░░░░] 33%
+Progress: [█████░░░░░] 42%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 6 min
-- Total execution time: 0.38 hours
+- Total plans completed: 5
+- Average duration: 7 min
+- Total execution time: 0.63 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation-design-system | 3/3 | 15 min | 5 min |
-| 02-content-conversion | 1/3 | 8 min | 8 min |
+| 02-content-conversion | 2/3 | 17 min | 8.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (6 min), 01-02 (5 min), 01-03 (4 min), 02-01 (8 min)
-- Trend: Stable
+- Last 5 plans: 01-02 (5 min), 01-03 (4 min), 02-01 (8 min), 02-02 (9 min)
+- Trend: Stable with slight increase for content-heavy plans
 
 *Updated after each plan completion*
 
@@ -59,6 +59,9 @@ Recent decisions affecting current work:
 - [01-03]: Homepage design approved by human review via local preview
 - [Phase 02-01]: Product page uses component composition pattern - each section is standalone component accepting locale prop
 - [Phase 02-01]: Czech and English content written independently with native phrasing (not translated) per QUAL-01 and QUAL-03
+- [Phase 02-02]: Native HTML details/summary for FAQ accordion - zero JavaScript, accessible by default
+- [Phase 02-02]: Application guide as inline component (not PDF) for better UX and searchability
+- [Phase 02-02]: 118 new translation keys added - all content written from scratch in native Czech and English
 
 ### Pending Todos
 
@@ -73,5 +76,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-13
-Stopped at: Completed 02-01-PLAN.md (product page and enhanced homepage)
-Resume file: .planning/phases/02-content-conversion/02-01-SUMMARY.md
+Stopped at: Completed 02-02-PLAN.md (FAQ and resources pages)
+Resume file: .planning/phases/02-content-conversion/02-02-SUMMARY.md
