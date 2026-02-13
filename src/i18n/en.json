@@ -54,6 +54,7 @@
 	"product.hero.stat": "1 mm = 50 mm",
 	"product.hero.statLabel": "Insulation equivalent",
 	"product.hero.cta": "Request a quote",
+	"product.hero.imageAlt": "TEMP-COAT TC101 application on industrial piping",
 	"product.specs.title": "Technical Specifications",
 	"product.specs.parameterLabel": "Parameter",
 	"product.specs.valueLabel": "Value",

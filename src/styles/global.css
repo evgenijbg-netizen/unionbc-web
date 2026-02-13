@@ -4,27 +4,27 @@
 	/* Light professional palette -- OKLCH for perceptual uniformity */
 
 	/* Surfaces: 50 = lightest (page bg), 900 = darkest (header/footer) */
-	--color-surface-900: oklch(0.15 0.01 250);  /* Darkest -- header, footer */
-	--color-surface-800: oklch(0.22 0.01 250);  /* Dark sections, nav */
-	--color-surface-700: oklch(0.30 0.01 250);  /* Dark borders, hover */
-	--color-surface-600: oklch(0.40 0.01 250);  /* Muted elements */
-	--color-surface-200: oklch(0.90 0.005 250); /* Card backgrounds */
+	--color-surface-900: oklch(0.15 0.01 250); /* Darkest -- header, footer */
+	--color-surface-800: oklch(0.22 0.01 250); /* Dark sections, nav */
+	--color-surface-700: oklch(0.3 0.01 250); /* Dark borders, hover */
+	--color-surface-600: oklch(0.4 0.01 250); /* Muted elements */
+	--color-surface-200: oklch(0.9 0.005 250); /* Card backgrounds */
 	--color-surface-100: oklch(0.95 0.005 250); /* Alternate section bg */
-	--color-surface-50: oklch(0.98 0.002 0);    /* Primary page background -- near-white, neutral */
+	--color-surface-50: oklch(0.98 0.002 0); /* Primary page background -- near-white, neutral */
 
 	/* Accent: professional blue, increased chroma for visibility on light */
-	--color-accent-600: oklch(0.50 0.18 250);   /* Active/pressed state */
-	--color-accent-500: oklch(0.58 0.18 250);   /* Primary buttons, links */
-	--color-accent-400: oklch(0.68 0.15 250);   /* Hover state, highlights */
+	--color-accent-600: oklch(0.5 0.18 250); /* Active/pressed state */
+	--color-accent-500: oklch(0.58 0.18 250); /* Primary buttons, links */
+	--color-accent-400: oklch(0.68 0.15 250); /* Hover state, highlights */
 
 	/* Warning/CTA: warm amber, slightly deeper for light bg contrast */
-	--color-warn-500: oklch(0.70 0.18 65);
+	--color-warn-500: oklch(0.7 0.18 65);
 
 	/* Text: dark on light -- inverted from current */
-	--color-text-primary: oklch(0.20 0.01 250);   /* Main body text -- dark */
+	--color-text-primary: oklch(0.2 0.01 250); /* Main body text -- dark */
 	--color-text-secondary: oklch(0.45 0.01 250); /* Secondary/muted text */
-	--color-text-dark: oklch(0.15 0.01 250);      /* Headings, emphasis */
-	--color-text-light: oklch(0.95 0.005 250);    /* Text on dark backgrounds (header/footer) */
+	--color-text-dark: oklch(0.15 0.01 250); /* Headings, emphasis */
+	--color-text-light: oklch(0.95 0.005 250); /* Text on dark backgrounds (header/footer) */
 
 	/* Typography -- Space Grotesk for headings (Czech designer, geometric/technical feel), Inter for body */
 	--font-heading: "Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif;

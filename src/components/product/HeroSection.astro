@@ -1,6 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import { getLocalizedPath } from "../../i18n/routes";
 import { type Locale, t } from "../../i18n/utils";
+import productPhoto from "../../assets/images/products/tc101-application.jpg";
 
 interface Props {
 	locale: Locale;
@@ -10,31 +12,49 @@ const { locale } = Astro.props;
 ---
 
 <section class="bg-gradient-to-b from-surface-800 to-surface-900 py-20 px-6 text-text-light">
-	<div class="max-w-4xl mx-auto text-center">
-		<h1 class="text-4xl md:text-6xl font-heading font-bold mb-6">
-			{t(locale, "product.hero.title")}
-		</h1>
-		<p class="text-xl md:text-2xl text-accent-400 mb-6">
-			{t(locale, "product.hero.subtitle")}
-		</p>
-		<p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-			{t(locale, "product.hero.description")}
-		</p>
-		<div class="bg-surface-700 border border-surface-600 rounded-lg p-6 inline-block mb-8">
-			<p class="text-4xl font-heading font-bold text-accent-400 mb-2">
-				{t(locale, "product.hero.stat")}
-			</p>
-			<p class="text-sm opacity-90">
-				{t(locale, "product.hero.statLabel")}
-			</p>
-		</div>
-		<div>
-			<a
-				href={getLocalizedPath("contact", locale)}
-				class="inline-block bg-accent-500 hover:bg-accent-400 text-white font-heading font-semibold px-8 py-3 rounded-sm transition"
-			>
-				{t(locale, "product.hero.cta")}
-			</a>
+	<div class="max-w-7xl mx-auto">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+			<!-- Text content -->
+			<div class="text-center md:text-left">
+				<h1 class="text-4xl md:text-6xl font-heading font-bold mb-6">
+					{t(locale, "product.hero.title")}
+				</h1>
+				<p class="text-xl md:text-2xl text-accent-400 mb-6">
+					{t(locale, "product.hero.subtitle")}
+				</p>
+				<p class="text-lg mb-8 opacity-90">
+					{t(locale, "product.hero.description")}
+				</p>
+				<div class="bg-surface-700 border border-surface-600 rounded-lg p-6 inline-block mb-8">
+					<p class="text-4xl font-heading font-bold text-accent-400 mb-2">
+						{t(locale, "product.hero.stat")}
+					</p>
+					<p class="text-sm opacity-90">
+						{t(locale, "product.hero.statLabel")}
+					</p>
+				</div>
+				<div>
+					<a
+						href={getLocalizedPath("contact", locale)}
+						class="inline-block bg-accent-500 hover:bg-accent-400 text-white font-heading font-semibold px-8 py-3 rounded-sm transition"
+					>
+						{t(locale, "product.hero.cta")}
+					</a>
+				</div>
+			</div>
+			<!-- Product image -->
+			<div class="order-first md:order-last">
+				<Image
+					src={productPhoto}
+					alt={t(locale, "product.hero.imageAlt")}
+					width={600}
+					height={430}
+					format="webp"
+					quality={85}
+					class="rounded-lg shadow-lg w-full h-auto"
+					loading="eager"
+				/>
+			</div>
 		</div>
 	</div>
 </section>

@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import { getLocalizedPath } from "../../i18n/routes";
 import { getLocaleFromUrl, t } from "../../i18n/utils";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import productImage from "../../assets/images/products/tc101-detail.jpg";
 
 const locale = getLocaleFromUrl(Astro.url);
 
@@ -81,6 +83,21 @@ const industries = ["cement", "refinery", "food", "brewery", "paper", "construct
 					{t(locale, "home.stats.certified_label")}
 				</p>
 			</div>
+		</div>
+	</section>
+
+	<!-- Product Image Section -->
+	<section class="py-12 px-6">
+		<div class="max-w-3xl mx-auto">
+			<Image
+				src={productImage}
+				alt={t(locale, "product.hero.imageAlt")}
+				width={800}
+				height={573}
+				format="webp"
+				quality={85}
+				class="rounded-lg shadow-xl w-full h-auto"
+			/>
 		</div>
 	</section>
 
