@@ -63,12 +63,14 @@ Plans:
   2. Product pages include real product images (migrated from old site) optimized via Astro Image component
   3. All technical claims in i18n files are verified -- fire classification contradiction resolved, thermal conductivity qualified, temperature range clarified
   4. Site builds without errors and looks professional on all viewports
-**Plans:** 3 plans
+  5. Messaging leads with credible benefits (safety, accessibility, visual inspection) not inflated thermal claims
+**Plans:** 4 plans
 
 Plans:
-- [ ] 02.1-01-PLAN.md -- Light color palette transformation (@theme + 22 component files)
-- [ ] 02.1-02-PLAN.md -- Technical claims audit (fire classification fix, thermal conductivity qualifier, temperature range clarification)
-- [ ] 02.1-03-PLAN.md -- Legacy image migration with Astro Image component + human visual approval
+- [x] 02.1-01-PLAN.md -- Light color palette transformation (@theme + 22 component files)
+- [x] 02.1-02-PLAN.md -- Technical claims audit (fire classification fix, thermal conductivity qualifier, temperature range clarification)
+- [x] 02.1-03-PLAN.md -- Legacy image migration with Astro Image component + human visual approval
+- [ ] 02.1-04-PLAN.md -- Credible messaging rewrite (safety-first positioning, remove inflated thermal claims)
 
 ### Phase 3: Interactive Calculator
 **Goal**: Visitors can estimate their energy savings and payback period using an interactive calculator, turning the site from a brochure into a sales tool
@@ -107,6 +109,6 @@ Phases execute in numeric order: 1 --> 2 --> 02.1 --> 3 --> 4
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 3/3 | Complete | 2026-02-13 |
 | 2. Content & Conversion | 3/3 | Complete | 2026-02-13 |
-| 02.1. Visual Refresh & Content Accuracy | 0/3 | Not started | - |
+| 02.1. Visual Refresh & Content Accuracy | 3/4 | In progress | - |
 | 3. Interactive Calculator | 0/1 | Not started | - |
 | 4. Launch & SEO Migration | 0/1 | Not started | - |
