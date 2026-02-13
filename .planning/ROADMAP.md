@@ -14,6 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation & Design System** - Bilingual architecture, responsive layout, industrial design system, hosting
 - [x] **Phase 2: Content & Conversion** - All product pages, resources, FAQ, contact, CTAs with from-scratch bilingual content
+- [ ] **Phase 02.1: Visual Refresh & Content Accuracy (INSERTED)** - Light palette, real images, factual claims audit
 - [ ] **Phase 3: Interactive Calculator** - Energy savings calculator as isolated Preact island with validated formulas
 - [ ] **Phase 4: Launch & SEO Migration** - Structured data, SEO audit, 301 redirects, go-live
 
@@ -53,6 +54,22 @@ Plans:
 - [x] 02-02-PLAN.md -- FAQ page with categorized accordion and Resources page (certificates, test results, application examples, guide)
 - [x] 02-03-PLAN.md -- Contact page, sticky CTA bar, i18n parity verification, human content review
 
+### Phase 02.1: Visual Refresh & Content Accuracy (INSERTED)
+
+**Goal:** Site uses a professional light color palette with real product imagery, and all technical claims are verified and internally consistent
+**Depends on:** Phase 2
+**Success Criteria** (what must be TRUE):
+  1. Site uses a light professional color palette (not dark industrial) while preserving the same design system token structure
+  2. Product pages include real product images (migrated from old site) optimized via Astro Image component
+  3. All technical claims in i18n files are verified -- fire classification contradiction resolved, thermal conductivity qualified, temperature range clarified
+  4. Site builds without errors and looks professional on all viewports
+**Plans:** 3 plans
+
+Plans:
+- [ ] 02.1-01-PLAN.md -- Light color palette transformation (@theme + 22 component files)
+- [ ] 02.1-02-PLAN.md -- Technical claims audit (fire classification fix, thermal conductivity qualifier, temperature range clarification)
+- [ ] 02.1-03-PLAN.md -- Legacy image migration with Astro Image component + human visual approval
+
 ### Phase 3: Interactive Calculator
 **Goal**: Visitors can estimate their energy savings and payback period using an interactive calculator, turning the site from a brochure into a sales tool
 **Depends on**: Phase 2 (calculator references product spec data established in Phase 2)
@@ -84,11 +101,12 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 --> 2 --> 3 --> 4
+Phases execute in numeric order: 1 --> 2 --> 02.1 --> 3 --> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Design System | 3/3 | ✓ Complete | 2026-02-13 |
-| 2. Content & Conversion | 3/3 | ✓ Complete | 2026-02-13 |
+| 1. Foundation & Design System | 3/3 | Complete | 2026-02-13 |
+| 2. Content & Conversion | 3/3 | Complete | 2026-02-13 |
+| 02.1. Visual Refresh & Content Accuracy | 0/3 | Not started | - |
 | 3. Interactive Calculator | 0/1 | Not started | - |
 | 4. Launch & SEO Migration | 0/1 | Not started | - |
