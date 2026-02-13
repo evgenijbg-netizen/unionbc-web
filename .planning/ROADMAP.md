@@ -29,12 +29,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. All pages share a consistent industrial design system -- dark backgrounds, technical typography, accent colors -- that signals "serious manufacturer"
   4. Any page loads in under 2 seconds on a throttled connection (static assets optimized, minimal JS shipped)
   5. Site is served over HTTPS with a valid SSL certificate on Cloudflare Pages
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Project scaffolding (Astro + TypeScript + Tailwind + Biome) and Cloudflare Pages deployment pipeline
-- [ ] 01-02: i18n system, shared layout shell, navigation, footer, design system tokens
-- [ ] 01-03: Old site URL inventory and redirect map preparation
+- [ ] 01-01-PLAN.md -- Project scaffolding (Astro 5 + TypeScript + Tailwind CSS 4 + Biome 2), design system tokens, old-site redirects
+- [ ] 01-02-PLAN.md -- i18n translation system, shared layout shell (header, footer, language switcher), bilingual homepage placeholders
+- [ ] 01-03-PLAN.md -- Homepage polish, build verification, Cloudflare Pages deployment, human visual sign-off
 
 ### Phase 2: Content & Conversion
 **Goal**: Visitors can understand what TC101 is, why it works, see evidence, download documents, and know who to contact -- in both Czech and English
@@ -88,7 +88,7 @@ Phases execute in numeric order: 1 --> 2 --> 3 --> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Design System | 0/3 | Not started | - |
+| 1. Foundation & Design System | 0/3 | Planned | - |
 | 2. Content & Conversion | 0/3 | Not started | - |
 | 3. Interactive Calculator | 0/1 | Not started | - |
 | 4. Launch & SEO Migration | 0/1 | Not started | - |
