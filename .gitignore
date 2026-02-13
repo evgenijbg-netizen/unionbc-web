@@ -1,0 +1,29 @@
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# astro
+.astro/
+
+# environment variables
+.env
+.env.production
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# temporary scaffolding
+.astro-temp/
+
+# old site files (preserved for reference, not deployed)
+www/
