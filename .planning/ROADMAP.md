@@ -2,7 +2,7 @@
 
 ## Overview
 
-This roadmap delivers a modern bilingual (CZ/EN) product website for TEMP-COAT TC101, replacing the outdated 2013-era Xara-generated site. The project progresses from bilingual architecture foundation, through content-first page development, to an interactive savings calculator, and concludes with SEO migration and launch. The critical constraint is that i18n architecture must come first (retrofitting is a partial rewrite) and content must be written from scratch (not migrated from Russian originals).
+This roadmap delivers a modern bilingual (CZ/EN) product website for TEMP-COAT TC101, replacing the outdated 2013-era Xara-generated site. The project progresses from bilingual architecture foundation, through content-first page development, and concludes with SEO migration and launch. The critical constraint is that i18n architecture must come first (retrofitting is a partial rewrite) and content must be written from scratch (not migrated from Russian originals).
 
 ## Phases
 
@@ -17,8 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 02.1: Visual Refresh & Content Accuracy (INSERTED)** - Light palette, real images, factual claims audit
 - [x] **Phase 02.2: Content Restructuring & Product Image (INSERTED)** - Dedicated applications page, TC101 bucket image
 - [x] **Phase 02.3: Messaging Rewrite & Tone of Voice (INSERTED)** - Problem-first messaging, new sections, CTA rewrite, reference placeholder
-- [ ] **Phase 3: Interactive Calculator** - Energy savings calculator as isolated Preact island with validated formulas
-- [ ] **Phase 4: Launch & SEO Migration** - Structured data, SEO audit, 301 redirects, go-live
+- [ ] **Phase 3: Launch & SEO Migration** - Structured data, SEO audit, 301 redirects, go-live
 
 ## Phase Details
 
@@ -110,23 +109,9 @@ Plans:
 - [x] 02.3-02-PLAN.md -- Product page rewrite (outcome benefits, cooperation workflow, product CTA)
 - [x] 02.3-03-PLAN.md -- Global CTA harmonization, reference placeholder, tone audit, i18n cleanup
 
-### Phase 3: Interactive Calculator
-**Goal**: Visitors can estimate their energy savings and payback period using an interactive calculator, turning the site from a brochure into a sales tool
-**Depends on**: Phase 2 (calculator references product spec data established in Phase 2)
-**Requirements**: CONV-02
-**Success Criteria** (what must be TRUE):
-  1. Visitor can input surface area, surface type, operating temperature, current insulation, energy source, and energy price into the calculator
-  2. Calculator outputs estimated annual energy savings (kWh/year), cost savings (CZK/year), and payback period based on validated formulas
-  3. Calculator works in both Czech and English with localized labels, units, and default energy prices
-  4. Calculator renders as a lightweight Preact island that loads on-demand without blocking page load
-**Plans**: TBD
-
-Plans:
-- [ ] 03-01: Calculator UI, formula implementation, bilingual labels, and validation
-
-### Phase 4: Launch & SEO Migration
+### Phase 3: Launch & SEO Migration
 **Goal**: The new site replaces the old one without losing search engine rankings, with full structured data enabling rich snippets
-**Depends on**: Phase 3 (all content and features must exist before final SEO work)
+**Depends on**: Phase 02.3 (all content and features must exist before final SEO work)
 **Requirements**: TECH-03, TECH-07
 **Success Criteria** (what must be TRUE):
   1. Every page has semantic HTML, proper heading hierarchy, meta descriptions, and targets relevant keywords (tekuta izolace, keramicka izolace, tepelna izolace, TEMP-COAT)
@@ -136,12 +121,12 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 04-01: Structured data (JSON-LD), SEO meta tags, sitemap, robots.txt, 301 redirects, final audit and DNS cutover
+- [ ] 03-01: Structured data (JSON-LD), SEO meta tags, sitemap, robots.txt, 301 redirects, final audit and DNS cutover
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 --> 2 --> 02.1 --> 02.2 --> 02.3 --> 3 --> 4
+Phases execute in numeric order: 1 --> 2 --> 02.1 --> 02.2 --> 02.3 --> 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -150,5 +135,4 @@ Phases execute in numeric order: 1 --> 2 --> 02.1 --> 02.2 --> 02.3 --> 3 --> 4
 | 02.1. Visual Refresh & Content Accuracy | 5/5 | Complete | 2026-02-13 |
 | 02.2. Content Restructuring & Product Image | 1/1 | Complete | 2026-02-13 |
 | 02.3. Messaging Rewrite & Tone of Voice | 3/3 | Complete | 2026-02-13 |
-| 3. Interactive Calculator | 0/1 | Not started | - |
-| 4. Launch & SEO Migration | 0/1 | Not started | - |
+| 3. Launch & SEO Migration | 0/1 | Not started | - |
