@@ -23,6 +23,8 @@ const whyusItems = [1, 2, 3, 4];
 	<!-- Hero Section -->
 	<section class="relative py-24 px-6 text-center overflow-hidden">
 		<MicrospheresBackground />
+		<!-- Radial gradient backdrop for text readability -->
+		<div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_90%_at_center,_white_25%,_transparent_75%)] pointer-events-none" aria-hidden="true"></div>
 		<div class="relative z-10 max-w-4xl mx-auto">
 			<h1 class="text-5xl md:text-7xl font-heading font-bold text-text-primary mb-4">
 				{t(locale, "home.hero.title")}

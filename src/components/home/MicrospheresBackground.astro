@@ -9,11 +9,11 @@
 // --- Circle-packing (greedy, deterministic seed) ---
 const W = 1440;
 const H = 600;
-const BAND_TOP = 80;
-const BAND_BOTTOM = 520;
-const MIN_R = 8;
-const MAX_R = 42;
-const GAP = 1; // visual spacing between circles
+const BAND_TOP = 60;
+const BAND_BOTTOM = 540;
+const MIN_R = 6;
+const MAX_R = 38;
+const GAP = 0.5; // tighter packing
 
 interface Circle {
 	cx: number;
@@ -46,15 +46,28 @@ function overlaps(cx: number, cy: number, r: number): boolean {
 	return false;
 }
 
-// Try to place ~200 circles with decreasing radii attempts
-const ATTEMPTS = 2000;
-for (let i = 0; i < ATTEMPTS && circles.length < 150; i++) {
-	const r = MIN_R + rand() * (MAX_R - MIN_R);
-	const cx = r + rand() * (W - 2 * r);
-	const cy = BAND_TOP + r + rand() * (BAND_BOTTOM - BAND_TOP - 2 * r);
+// Multi-pass: first place large circles, then fill gaps with smaller ones
+const PASSES = [
+	{ minR: 22, maxR: 38, attempts: 800, limit: 60 },
+	{ minR: 12, maxR: 22, attempts: 1500, limit: 160 },
+	{ minR: 6, maxR: 12, attempts: 2000, limit: 300 },
+];
 
-	if (!overlaps(cx, cy, r)) {
-		circles.push({ cx: Math.round(cx * 10) / 10, cy: Math.round(cy * 10) / 10, r: Math.round(r * 10) / 10 });
+for (const pass of PASSES) {
+	let placed = 0;
+	for (let i = 0; i < pass.attempts && placed < pass.limit; i++) {
+		const r = pass.minR + rand() * (pass.maxR - pass.minR);
+		const cx = r + rand() * (W - 2 * r);
+		const cy = BAND_TOP + r + rand() * (BAND_BOTTOM - BAND_TOP - 2 * r);
+
+		if (!overlaps(cx, cy, r)) {
+			circles.push({
+				cx: Math.round(cx * 10) / 10,
+				cy: Math.round(cy * 10) / 10,
+				r: Math.round(r * 10) / 10,
+			});
+			placed++;
+		}
 	}
 }
 ---
@@ -70,16 +83,16 @@ for (let i = 0; i < ATTEMPTS && circles.length < 150; i++) {
 		x1="0" y1={BAND_TOP}
 		x2={W} y2={BAND_TOP}
 		stroke="oklch(0.23 0.06 264)"
-		stroke-width="2"
-		opacity="0.12"
+		stroke-width="2.5"
+		opacity="0.25"
 	/>
 	<!-- Bottom boundary line -->
 	<line
 		x1="0" y1={BAND_BOTTOM}
 		x2={W} y2={BAND_BOTTOM}
 		stroke="oklch(0.23 0.06 264)"
-		stroke-width="2"
-		opacity="0.12"
+		stroke-width="2.5"
+		opacity="0.25"
 	/>
 	<!-- Ceramic microspheres -->
 	{circles.map((c) => (
@@ -89,8 +102,8 @@ for (let i = 0; i < ATTEMPTS && circles.length < 150; i++) {
 			r={c.r}
 			fill="none"
 			stroke="oklch(0.70 0.124 185)"
-			stroke-width="1.2"
-			opacity="0.10"
+			stroke-width="1.5"
+			opacity="0.22"
 		/>
 	))}
 </svg>
