@@ -17,6 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 02.1: Visual Refresh & Content Accuracy (INSERTED)** - Light palette, real images, factual claims audit
 - [x] **Phase 02.2: Content Restructuring & Product Image (INSERTED)** - Dedicated applications page, TC101 bucket image
 - [x] **Phase 02.3: Messaging Rewrite & Tone of Voice (INSERTED)** - Problem-first messaging, new sections, CTA rewrite, reference placeholder
+- [ ] **Phase 02.4: ROI Calculator App (INSERTED)** - Internal tool behind login: ROI calculations, graphical output, PDF export on Union B+C letterhead
 - [ ] **Phase 3: Launch & SEO Migration** - Structured data, SEO audit, 301 redirects, go-live
 
 ## Phase Details
@@ -109,9 +110,29 @@ Plans:
 - [x] 02.3-02-PLAN.md -- Product page rewrite (outcome benefits, cooperation workflow, product CTA)
 - [x] 02.3-03-PLAN.md -- Global CTA harmonization, reference placeholder, tone audit, i18n cleanup
 
+### Phase 02.4: ROI Calculator App (INSERTED)
+
+**Goal:** Internal sales tool behind a simple login where Union B+C staff can calculate ROI for TEMP-COAT TC101 on various objects, view results graphically, and export professional PDF reports on Union B+C letterhead to send to customers
+**Depends on:** Phase 02.3
+**Success Criteria** (what must be TRUE):
+  1. Calculator is accessible at a dedicated route (e.g., /app/calculator) behind a simple shared-password login
+  2. User can input object parameters and get ROI calculation results (formulas from Excel — to be provided)
+  3. Results are displayed graphically (charts, visual breakdown) in a professional layout
+  4. User can export the calculation as a PDF on Union B+C branded letterhead (logo, contact info, professional formatting)
+  5. Application works on desktop and tablet (mobile optional for internal tool)
+  6. Login session persists (cookie-based) so user doesn't re-enter password on every visit
+  7. No calculation history in MVP (may be added later)
+  8. Site builds with 0 errors, public pages unaffected
+**Plans:** TBD (awaiting Excel formulas from user)
+
+Plans:
+- [ ] 02.4-01: TBD — Auth middleware, login page, protected route structure
+- [ ] 02.4-02: TBD — Calculator UI and logic (formulas from Excel)
+- [ ] 02.4-03: TBD — Graphical results display and PDF export with Union B+C letterhead
+
 ### Phase 3: Launch & SEO Migration
 **Goal**: The new site replaces the old one without losing search engine rankings, with full structured data enabling rich snippets
-**Depends on**: Phase 02.3 (all content and features must exist before final SEO work)
+**Depends on**: Phase 02.4 (all content and features must exist before final SEO work)
 **Requirements**: TECH-03, TECH-07
 **Success Criteria** (what must be TRUE):
   1. Every page has semantic HTML, proper heading hierarchy, meta descriptions, and targets relevant keywords (tekuta izolace, keramicka izolace, tepelna izolace, TEMP-COAT)
@@ -126,7 +147,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 --> 2 --> 02.1 --> 02.2 --> 02.3 --> 3
+Phases execute in numeric order: 1 --> 2 --> 02.1 --> 02.2 --> 02.3 --> 02.4 --> 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -135,4 +156,5 @@ Phases execute in numeric order: 1 --> 2 --> 02.1 --> 02.2 --> 02.3 --> 3
 | 02.1. Visual Refresh & Content Accuracy | 5/5 | Complete | 2026-02-13 |
 | 02.2. Content Restructuring & Product Image | 1/1 | Complete | 2026-02-13 |
 | 02.3. Messaging Rewrite & Tone of Voice | 3/3 | Complete | 2026-02-13 |
+| 02.4. ROI Calculator App | 0/3 | Blocked (awaiting Excel formulas) | - |
 | 3. Launch & SEO Migration | 0/1 | Not started | - |

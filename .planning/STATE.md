@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-02-12)
 
 **Core value:** Visitor understands what TEMP-COAT TC101 is, why it works, how much it saves -- and knows who to contact.
-**Current focus:** Phase 3: Interactive Calculator
+**Current focus:** Phase 02.4: ROI Calculator App
 
 ## Current Position
 
-Phase: 02.3 COMPLETE -- Moving to Phase 3
-Plan: 3 of 3 in Phase 02.3 (all complete, verified)
-Status: Phase 02.3 verified -- problem-first messaging, outcome benefits, consultation CTAs, reference placeholder, factual tone
-Last activity: 2026-02-13 -- Phase 02.3 verification passed (6/6 must-haves)
+Phase: 02.4 BLOCKED -- Awaiting Excel formulas from user
+Plan: 0 of 3 in Phase 02.4 (plans are TBD pending input data)
+Status: Phase 02.3 complete, Phase 02.4 created -- waiting for Excel with ROI calculation formulas (expected 2026-02-15)
+Last activity: 2026-02-14 -- Phase 02.4 added to roadmap, hero microspheres background implemented
 
 Progress: [█████████░] 90%
 
