@@ -1,0 +1,96 @@
+---
+/**
+ * Decorative SVG background representing ceramic microspheres
+ * in a TEMP-COAT TC101 insulation layer cross-section.
+ *
+ * Two horizontal boundary lines with densely packed circles between them.
+ */
+
+// --- Circle-packing (greedy, deterministic seed) ---
+const W = 1440;
+const H = 600;
+const BAND_TOP = 80;
+const BAND_BOTTOM = 520;
+const MIN_R = 8;
+const MAX_R = 42;
+const GAP = 1; // visual spacing between circles
+
+interface Circle {
+	cx: number;
+	cy: number;
+	r: number;
+}
+
+// Simple seeded PRNG (mulberry32) for deterministic output across builds
+function mulberry32(seed: number) {
+	return () => {
+		seed |= 0;
+		seed = (seed + 0x6d2b79f5) | 0;
+		let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+		t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+		return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+	};
+}
+
+const rand = mulberry32(42);
+
+const circles: Circle[] = [];
+
+function overlaps(cx: number, cy: number, r: number): boolean {
+	for (const c of circles) {
+		const dx = cx - c.cx;
+		const dy = cy - c.cy;
+		const dist = Math.sqrt(dx * dx + dy * dy);
+		if (dist < r + c.r + GAP) return true;
+	}
+	return false;
+}
+
+// Try to place ~200 circles with decreasing radii attempts
+const ATTEMPTS = 2000;
+for (let i = 0; i < ATTEMPTS && circles.length < 150; i++) {
+	const r = MIN_R + rand() * (MAX_R - MIN_R);
+	const cx = r + rand() * (W - 2 * r);
+	const cy = BAND_TOP + r + rand() * (BAND_BOTTOM - BAND_TOP - 2 * r);
+
+	if (!overlaps(cx, cy, r)) {
+		circles.push({ cx: Math.round(cx * 10) / 10, cy: Math.round(cy * 10) / 10, r: Math.round(r * 10) / 10 });
+	}
+}
+---
+
+<svg
+	class="absolute inset-0 w-full h-full pointer-events-none"
+	viewBox={`0 0 ${W} ${H}`}
+	preserveAspectRatio="xMidYMid slice"
+	aria-hidden="true"
+>
+	<!-- Top boundary line -->
+	<line
+		x1="0" y1={BAND_TOP}
+		x2={W} y2={BAND_TOP}
+		stroke="oklch(0.23 0.06 264)"
+		stroke-width="2"
+		opacity="0.12"
+	/>
+	<!-- Bottom boundary line -->
+	<line
+		x1="0" y1={BAND_BOTTOM}
+		x2={W} y2={BAND_BOTTOM}
+		stroke="oklch(0.23 0.06 264)"
+		stroke-width="2"
+		opacity="0.12"
+	/>
+	<!-- Ceramic microspheres -->
+	{circles.map((c) => (
+		<circle
+			cx={c.cx}
+			cy={c.cy}
+			r={c.r}
+			fill="none"
+			stroke="oklch(0.70 0.124 185)"
+			stroke-width="1.2"
+			opacity="0.10"
+		/>
+	))}
+</svg>
